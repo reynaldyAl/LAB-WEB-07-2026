@@ -1,0 +1,84 @@
+/* ===== LARGE (max 1200px) ===== */
+@media (max-width: 1200px) {
+    #main-nav .nav-list {
+        gap: 16px;
+    }
+
+    #main-nav .nav-list a {
+        font-size: .85rem;
+    }
+}
+
+/* ===== MEDIUM (max 992px) — nav jadi hamburger ===== */
+@media (max-width: 992px) {
+    .site-header {
+        padding: 16px 20px;
+    }
+
+    .brand span {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #main-nav {
+        flex-basis: 100%;
+    }
+
+    #main-nav .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background: rgba(11,45,57,.95);
+        margin-top: 14px;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .nav-toggle:checked ~ #main-nav .nav-list {
+        display: flex;
+    }
+
+    #main-nav .nav-list a {
+        padding: 14px 20px;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        font-size: .9rem;
+    }
+
+    #main-nav .nav-list a:hover {
+        background: rgba(255, 255, 255, .08);
+        color: #cfe3df;
+    }
+
+    .hero {
+        padding: 0 20px 40px;
+    }
+
+    section {
+        padding: 32px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location-grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* ===== SMALL (max 576px) ===== */
+@media (max-width: 576px) {
+    .galeri, .activity-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
