@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Merch Corner | Official K-Pop Shop & Group Order</title>
+  <!--CDN Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- NAVBAR-->
+   <!--PR: perbaiki biar muncul saat ada di hp dan berupa hamburger kemudian pesan sekarang jadi logo -->
+  <nav class="sticky top-0 z-50 bg-white border-b border-pink-200 p-4">
+    <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl mx-auto">
+      <div class="flex items-center justify-between">
+      
+      <div class="flex items-center">
+        <span class="text-xl sm:text-2xl font-bold text-pink-600">K-Merch Corner</span>
+      </div>
+      
+      <!--Responsif hidden di HP & block/flex di layar-->
+      <div class="hidden lg:flex space-x-6 text-sm font-semibold text-gray-700">
+        <a href="#beranda" class="hover:text-pink-600">Beranda</a>
+        <a href="#tentang" class="hover:text-pink-600">Tentang</a>
+        <a href="#layanan" class="hover:text-pink-600">Keunggulan</a>
+        <a href="#katalog" class="hover:text-pink-600">Katalog</a>
+        <a href="#testimoni" class="hover:text-pink-600">Testimoni</a>
+       <a href="#kontak-info" class="hover:text-pink-600">Kontak</a>
+      </div>
+
+        <div class="flex items-center gap-3">
+          <!-- Button CTA dengan State Variant hover-->
+          <a href="#kontak" class="inline-flex items-center justify-center" aria-label="Pesan sekarang" title="Pesan sekarang">
+            <img src="Media/logo keranjang.png" alt="" class="w-8 h-8 object-contain">
+          </a>
+          <!-- humberger -->
+          <button id="nav-toggle" type="button" class="lg:hidden p-2 text-gray-700 hover:text-pink-600" aria-label="Buka menu navigasi" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+            <span class="block w-6 h-0.5 bg-current"></span>
+            <span class="block w-6 h-0.5 bg-current mt-1.5"></span>
+            <span class="block w-6 h-0.5 bg-current mt-1.5"></span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden mt-3 border-t border-pink-100 pt-2 text-sm font-semibold text-gray-700">
+        <a href="#beranda" class="block py-2 hover:text-pink-600">Beranda</a>
+        <a href="#tentang" class="block py-2 hover:text-pink-600">Tentang</a>
+        <a href="#layanan" class="block py-2 hover:text-pink-600">Keunggulan</a>
+        <a href="#katalog" class="block py-2 hover:text-pink-600">Katalog</a>
+        <a href="#testimoni" class="block py-2 hover:text-pink-600">Testimoni</a>
+        <a href="#kontak-info" class="block py-2 hover:text-pink-600">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--HEADER & HERO SECTION-->
+  <section id="beranda" class="bg-pink-100 py-16 px-4 scroll-mt-16">
+    <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+      <!-- max-w-xs dan anuan lainnya untuk Lebar maksimal bertahap berdasarkan ukuran layar -->
+       <!--flex flex-col md:flex-row, elemen jadi tersusun vertikal di hp dan berubah jadi horizontal di layar yang lebar -->
+      <div class="w-full md:w-1/2 text-center md:text-left">
+         <!--w-full md:w-1/2  lebar 100% di layar hp, 50 % di layar lebar-->
+         <!--text-center md:text-left, teks rata tengah di hp, rata kiri di lpatop-->
+        <p class="text-xs font-bold text-pink-600 bg-pink-200 px-3 py-1 rounded-full w-fit mx-auto md:mx-0 mb-4">
+          100% OFFICIAL MERCHANDISE
+        </p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          Solusi Belanja Album & Merch K-Pop Impianmu!
+        </h1>
+        <p class="text-gray-600 text-sm sm:text-base mb-6">
+          Melayani Pre-Order (PO), Ready Stock, dan Jasa Group Order (GO) langsung dari Korea Selatan dengan aman dan terjangkau.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#katalog" class="bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-lg text-center">
+            Mulai Sekarang
+          </a>
+          <a href="#layanan" class="bg-white hover:bg-gray-100 text-purple-600 border border-purple-300 font-bold px-6 py-3 rounded-lg text-center">
+            Pelajari Lebih Lanjut
+          </a>
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 flex justify-center">
+        <div class="bg-white p-6 rounded-2xl border border-pink-200 w-full max-w-sm text-center shadow-sm">
+          <!--max-w-sm shadow-sm lebar maksimal efek bayangan tipis-->
+          <img 
+            src="Media/merch.jpg" 
+            alt="K-Pop Album Official" 
+            class="w-full h-48 object-cover rounded-xl mb-4"
+          >
+          <!-- w-full h-48 object-cover rounded-xl mb-4, gambar full, height 192px, foto tetap rapi, sudut membulat-->
+
+          <p class="font-bold text-gray-800">Merch Official Terbaru</p>
+          <p class="text-xs text-gray-500 mt-1">Terhitung di Hanteo & Circle Chart</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="tentang" class="py-12 bg-white px-4 scroll-mt-16">
+    <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Tentang K-Merch Corner</h2>
+      <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+        <!--leading-relaxed, jarak spasi antar baris kalimat-->
+        K-Merch Corner didirikan untuk membantu para K-Popers di Indonesia mendapatkan produk merchandise dan album idol favorit secara aman, cepat, dan transparan. Kami bekerja sama langsung dengan distributor terpercaya di Seoul untuk memastikan semua pesanan sampai ke tangan kamu dalam kondisi sempurna tanpa pusing urus bea cukai.
+      </p>
+    </div>
+  </section>
+
+  <section id="layanan" class="py-12 bg-gray-100 px-4 scroll-mt-16">
+    <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl mx-auto">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Keunggulan Layanan</h2>
+        <p class="text-gray-600 text-sm mt-1">3 Poin penting layanan yang kami tawarkan</p>
+      </div>
+
+      <!--GRID SYSTEM -->
+      <!-- grid-cols-1 di HP, sm:grid-cols-2 di tablet, md:grid-cols-3 di layar besar -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center text-pink-600 font-bold mb-4">
+            01
+          </div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">100% Chart Counted</h3>
+          <p class="text-gray-600 text-sm">
+            Setiap pembelian album dijamin terhitung resmi di chart musik Korea seperti Hanteo dan Circle Chart.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 font-bold mb-4">
+            02
+          </div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Packing Extra Aman</h3>
+          <p class="text-gray-600 text-sm">
+            Gratis bubble wrap tebal dan kardus pelindung khusus agar barang kamu aman tanpa penyok.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 font-bold mb-4">
+            03
+          </div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Sistem DP Friendly</h3>
+          <p class="text-gray-600 text-sm">
+            Bisa bayar DP terlebih dahulu untuk amankan slot PO, dan pelunasan saat barang siap kirim.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="katalog" class="py-12 bg-white px-4 scroll-mt-16">
+    <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl mx-auto">
+      
+      <!-- Judul & Subtitle Section -->
+      <div class="text-center mb-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Katalog Produk</h2>
+        <p class="text-gray-600 text-sm mt-1">Pilihan produk official paling populer saat ini</p>
+      </div>
+      <!--grid system-->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+        <div class="border border-gray-200 rounded-xl p-4 bg-white text-center hover:shadow-md transition">
+          <img 
+            src="Media/album CORTIS.jpg" 
+            alt="Album CORTIS" 
+            class="w-full h-48 object-cover rounded-lg mb-3"
+          >
+          <h3 class="font-bold text-gray-800">Album CORTIS</h3>
+          <p class="text-pink-600 font-bold text-sm my-1">Rp 385.000</p>
+          <a href="#kontak" class="block bg-pink-500 hover:bg-pink-600 text-white text-xs py-2 rounded mt-2 font-medium">Pesan Sekarang</a>
+        </div>
+
+        <div class="border border-gray-200 rounded-xl p-4 bg-white text-center hover:shadow-md transition">
+          <img 
+            src="Media/NCT lightstick.jpg" 
+            alt="Lightstick NCT" 
+            class="w-full h-48 object-cover rounded-lg mb-3"
+          >
+          <h3 class="font-bold text-gray-800">Lightstick NCT</h3>
+          <p class="text-pink-600 font-bold text-sm my-1">Rp 650.000</p>
+          <a href="#kontak" class="block bg-pink-500 hover:bg-pink-600 text-white text-xs py-2 rounded mt-2 font-medium">Pesan Sekarang</a>
+        </div>
+
+        <div class="border border-gray-200 rounded-xl p-4 bg-white text-center hover:shadow-md transition">
+          <img 
+            src="Media/album AESPA.jpg" 
+            alt="Album AESPA" 
+            class="w-full h-48 object-cover rounded-lg mb-3"
+          >
+          <h3 class="font-bold text-gray-800">Album AESPA</h3>
+          <p class="text-pink-600 font-bold text-sm my-1">Rp 445.000</p>
+          <a href="#kontak" class="block bg-pink-500 hover:bg-pink-600 text-white text-xs py-2 rounded mt-2 font-medium">Pesan Sekarang</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="testimoni" class="py-12 bg-gray-100 px-4 scroll-mt-16">
+    <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">Testimoni Pelanggan</h2>
+        <!--grid system-->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="bg-white p-4 rounded-xl border border-gray-200">
+          <p class="text-gray-600 text-xs sm:text-sm mb-3">
+            "Adminnya ramah banget! Album nyampe Makassar dengan selamat tanpa lecet sedikit pun karena kardusnya tebal."
+          </p>
+          <p class="font-bold text-xs text-gray-800">- budiono siregar (Makassar)</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-gray-200">
+          <p class="text-gray-600 text-xs sm:text-sm mb-3">
+            "Awalnya ragu ikutan PO, tapi ternyata terpercaya banget. Would definitely repeat order di sini."
+          </p>
+          <p class="font-bold text-xs text-gray-800">- imroatus (Jakarta)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--FORM PENDAFTARAN / CONTACT-->
+  <section id="kontak" class="py-12 bg-white px-4 scroll-mt-16">
+    <div class="max-w-xs sm:max-w-md md:max-w-xl mx-auto bg-pink-500 p-6 sm:p-8 rounded-2xl text-white">
+      <h2 class="text-xl sm:text-2xl font-bold text-center mb-2">Form Pemesanan / Kontak</h2>
+      <p class="text-xs text-center text-pink-100 mb-6">Isi form di bawah untuk mendaftar PO atau bertanya.</p>
+
+      <form class="space-y-4" onsubmit="event.preventDefault();">
+        <!--space-y-4, jarak otomatis antar elemen. onsubmit="event.preventDefault, supaya nda reload otomatis pas tombol reload diklik -->
+        <div>
+          <label class="block text-xs font-bold mb-1">Nama Lengkap</label>
+          <input type="text" placeholder="Masukkan nama kamu" class="w-full p-2 rounded bg-white text-gray-800 text-sm border border-gray-300 focus:border-purple-600 focus:outline-none">
+        <!--focus:border-purple-600 focus:outline-none, menghilangkan garis luar default browser jadi border warna ungu kalau diklik-->
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold mb-1">Nomor WhatsApp</label>
+          <input type="text" placeholder="08xxxxxxxxxx" class="w-full p-2 rounded bg-white text-gray-800 text-sm border border-gray-300 focus:border-purple-600 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold mb-1">Alamat Pengiriman Lengkap</label>
+          <textarea rows="2" placeholder="Jl. Nama Jalan, No. Rumah, Kecamatan, Kota/Kabupaten, Kode Pos" class="w-full p-2 rounded bg-white text-gray-800 text-sm border border-gray-300 focus:border-purple-600 focus:outline-none"></textarea>
+        <!-- textarea untuk text yang panjang-->
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold mb-1">Judul Album / Merch</label>
+          <input type="text" placeholder="Contoh: Album CORTIS / Lightstick NCT" class="w-full p-2 rounded bg-white text-gray-800 text-sm border border-gray-300 focus:border-purple-600 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold mb-1">Pesan / Catatan Tambahan</label>
+          <textarea rows="3" placeholder="Tulis catatan (misal: pilihan versi album)..." class="w-full p-2 rounded bg-white text-gray-800 text-sm border border-gray-300 focus:border-purple-600 focus:outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 active:bg-purple-800 text-white font-bold py-2 rounded text-sm">
+          Kirim Form
+        </button>
+      </form>
+    </div>
+  </section>
+
+<!--INFORMASI KONTAK-->
+  <section id="kontak-info" class="py-12 bg-gray-100 px-4 scroll-mt-16">
+    <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl mx-auto">
+      
+      <div class="text-center mb-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Hubungi Kami</h2>
+        <p class="text-gray-600 text-sm mt-1">Temukan dan hubungi kami melalui platform media sosial pilihanmu</p>
+      </div>
+        <!--grid system-->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <a href="https://wa.me/628123456789" target="_blank" class="block bg-white p-6 rounded-xl border border-gray-200 text-center hover:bg-pink-50">
+          <div class="text-3xl mb-2">💬</div>
+          <h3 class="font-bold text-gray-800 text-sm">WhatsApp</h3>
+          <p class="text-xs text-gray-500 mt-1">+62 676-7676-767</p>
+        </a>
+        <!--block, supaya elemen link seukuran dengan grid-->
+
+        <a href="https://instagram.com" target="_blank" class="block bg-white p-6 rounded-xl border border-gray-200 text-center hover:bg-pink-50">
+          <div class="text-3xl mb-2">📸</div>
+          <h3 class="font-bold text-gray-800 text-sm">Instagram</h3>
+          <p class="text-xs text-gray-500 mt-1">@kmerch_corner</p>
+        </a>
+
+        <a href="https://tiktok.com" target="_blank" class="block bg-white p-6 rounded-xl border border-gray-200 text-center hover:bg-pink-50">
+          <div class="text-3xl mb-2">🎵</div>
+          <h3 class="font-bold text-gray-800 text-sm">TikTok</h3>
+          <p class="text-xs text-gray-500 mt-1">@kmerch_corner</p>
+        </a>
+
+        <a href="mailto:support@kmerchcorner.com" class="block bg-white p-6 rounded-xl border border-gray-200 text-center hover:bg-pink-50">
+          <div class="text-3xl mb-2">✉️</div>
+          <h3 class="font-bold text-gray-800 text-sm">Email Support</h3>
+          <p class="text-xs text-gray-500 mt-1">help@kmerchcorner.com</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!--FOOTER-->
+  <footer class="bg-gray-800 text-gray-300 py-8 px-4 text-xs">
+    <!--grid system-->
+    <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+      <div>
+        <h4 class="font-bold text-white text-sm mb-2">✨ K-Merch Corner</h4>
+        <p class="text-gray-400">Pusat pemesanan album & merch K-Pop original di Indonesia.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-white text-sm mb-2">Media Sosial</h4>
+        <p>Instagram: @kmerch_corner</p>
+        <p>TikTok: @kmerch_corner</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-white text-sm mb-2">Informasi</h4>
+        <p>Kebijakan Privasi | Syarat & Ketentuan</p>
+      </div>
+    </div>
+    <div class="text-center border-t border-gray-700 pt-4 text-gray-500">
+      <p>© 2026 K-Merch Corner. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById("nav-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!isOpen));
+      navToggle.setAttribute("aria-label", isOpen ? "Buka menu navigasi" : "Tutup menu navigasi");
+      mobileMenu.classList.toggle("hidden", isOpen);
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Buka menu navigasi");
+      });
+    });
+  </script>
+
+</body>
+</html>

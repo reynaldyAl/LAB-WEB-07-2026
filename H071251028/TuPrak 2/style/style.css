@@ -1,0 +1,166 @@
+/* element selector */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #005f73;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+}
+
+section {
+    background-color: #ffffff;
+    margin: 15px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 900px;
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #005f73;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    background-color: #0a9396;
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.galeri-container {
+    display: flex;
+    gap: 15px; 
+    justify-content: center;
+    align-items: stretch;
+}
+
+.galeri-container figure {
+    flex: 1; 
+    margin: 0; 
+    text-align: center;
+}
+
+.galeri-container img {
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
+    border: 2px solid #005f73;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* id selector */
+#beranda { 
+    border-bottom: 4px solid #ee9b00;
+}
+
+#pendaftaran {
+    background-color: #fefae0;
+}
+
+.btn-submit {
+    background-color: #005f73;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-reset {
+    background-color: #ae2012;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+nav ul li a:hover {
+    background-color: #ee9b00;
+    color: #000;
+}
+
+/* class selector dan pseudo class*/ 
+.btn-submit:hover {
+    background-color: #0a9396;
+}
+
+.btn-reset:hover {
+    background-color: #9b2226;
+}
+
+/* responsif di max width 600px */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeri-container {
+        flex-direction: column; 
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
