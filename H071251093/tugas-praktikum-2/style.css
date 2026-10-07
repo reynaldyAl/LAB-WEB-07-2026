@@ -1,0 +1,200 @@
+/* element selector */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f5f1e8;
+    margin: 0;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+h2 {
+    color: #2e4034;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* id selector */
+#header-utama {
+    background-color: #2e4034;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+#header-utama p {
+    color: #ffffff;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    color: #ffffff;
+    font-size: 28px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #3f5a49;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 16px; 
+}
+
+nav ul li a:hover {
+    background-color: #7a9a6e;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+section {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin-bottom: 20px; 
+}
+
+/* class selector */
+.galeri-grid {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.galeri-grid figure {
+    margin: 0;
+    width: 200px;
+    border: 1px solid #dddddd; 
+}
+
+.galeri-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeri-grid figcaption {
+    padding: 6px; 
+    font-size: 14px;
+    text-align: center;
+}
+
+#aktivitas li {
+    margin-bottom: 6px; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid #dddddd; 
+    padding: 8px; 
+    text-align: left;
+}
+
+table th {
+    background-color: #2e4034;
+    color: #ffffff;
+}
+
+.lokasi-link {
+    color: #2e4034;
+    font-weight: bold;
+}
+
+.lokasi-link:hover {
+    color: #7a9a6e;
+}
+
+#multimedia video {
+    max-width: 400px;
+    width: 100%;
+}
+
+form {
+    display: flex; 
+    flex-direction: column;
+    max-width: 400px;
+}
+
+form label {
+    margin-bottom: 4px; 
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    margin-bottom: 12px; 
+    padding: 8px; 
+    border: 1px solid #cccccc; 
+}
+
+.btn {
+    background-color: #2e4034;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.btn:hover {
+    background-color: #7a9a6e;
+}
+
+footer {
+    background-color: #2e4034;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #menu-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    .galeri-grid figure {
+        width: 100%;
+    }
+}
