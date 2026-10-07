@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEVENTEEN RIGTH HERE | JAKARTA</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<!-- 
+#442310
+#e06e2d
+
+-->
+
+<body class="bg-[#e7ebec] antialiased">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-[#442310] text-white shadow-sm">
+        <nav class="mx-auto flex h-[92px] max-w-[1440px] items-center justify-between px-4 sm:px-5">
+            <a href="#home"><img src="media/right here.png" alt="SVT RGHT HRE" class="h-14 w-auto sm:h-16 lg:h-20"></a>
+
+            <!-- DESKTOP -->
+            <div class="hidden gap-10 items-center text-12px font-bold lg:flex">
+                <a href="#about" class="transition hover:text-[#e06e2d]">ABOUT</a>
+                <a href="#ticket" class="transition hover:text-[#e06e2d]">TICKET</a>
+                <a href="#gallery" class="transition hover:text-[#e06e2d]">GALLERY</a>
+                <a href="#buy" class="rounded-full bg-[#e06e2d] px-7 py-2.5 text-12px font-bold transition hover:text-[#442310]">GET TICKETS</a>
+            </div>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button id="menu-button" type="button" class="text-3xl lg:hidden" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+        </nav>
+
+        <!-- MOBILE NAVBAR -->
+        <div id="mobile-menu" class="hidden border-t border-white/10 bg-[#442310] px-5 pb-5 lg:hidden">
+            <div class="flex flex-col gap-4 pt-4 text-sm font-bold">
+                <a href="#about" onclick="toggleMenu()" class="transition hover:text-[#e06e2d]">ABOUT</a>
+                <a href="#ticket" onclick="toggleMenu()" class="transition hover:text-[#e06e2d]">TICKET</a>
+                <a href="#gallery" onclick="toggleMenu()" class="transition hover:text-[#e06e2d]">GALLERY</a>
+                <a href="#buy" onclick="toggleMenu()" class="w-fit rounded-full bg-[#e06e2d] px-7 py-2.5 text-[12px] font-bold transition hover:text-[#442310]">GET TICKETS</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="home" class="scroll-mt-[92px] relative overflow-hidden bg-gradient-to-b from-[#442310] to-[#aaab85] text-white">
+            <div class="mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-808px max-w-1440px items-center gap-12 px-6 py-20">
+                <div>
+                    <p class="text-4xl font-serif font-bold leading-none tracking-tight sm:text-5xl lg:text-6xl">SEVENTEEN</p>
+                    <p class="mt-2 font-serif text-3xl leading-none sm:text-4xl lg:text-5xl">RIGHT HERE</p>
+
+                    <p class="mt-6 text-base font-light sm:mt-8 sm:text-lg">WE MAKE THE MOMENT, TOGETHER.</p>
+
+                    <a href="#ticket"class="mt-7 inline-flex rounded-full bg-[#e06e2d] px-8 py-3 text-[13px] font-bold text-[#442310] transition hover:text-white sm:px-12 sm:py-4 sm:text-15px">GET TICKETS</a>
+                </div>
+
+                <div>
+                    <img src="media/Seventeen.jpg" alt="Svt Right Here" class="border border-white rounded-3xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="scroll-mt-[92px] relative overflow-hidden text-white">
+            <!-- Info Singkat -->
+            <div class="mx-auto min-h-808px max-w-1440px bg-[url(media/bg.png)] bg-cover bg-center items-center gap-8 px-4 py-14 sm:gap-12 sm:px-6 sm:py-20">
+                <!-- JUDUL -->
+                <h2 class="font-serif text-3xl leading-tight p-2 sm:text-4xl">THE MOMENT IS RIGHT HERE.</h2>
+
+                <!-- BARIS BAWAH: GAMBAR + INFORMASI -->
+                <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+                    <!-- KOLOM KIRI: GAMBAR -->
+                    <div class="flex w-full max-w-[700px] snap-x snap-mandatory overflow-x-auto scroll-smooth rounded-3xl">
+                        <img src="media/SEVENTEEN X CARAT.jpg" alt="Visual konser dan CARAT" class="h-[250px] w-full sm:h-[350px] sm:w-[700px] flex-none snap-center object-cover">
+                        <img src="media/2.webp" alt="Visual konser dan CARAT" class="h-[250px] w-full sm:h-[350px] sm:w-[700px] flex-none snap-center object-cover">
+                        <img src="media/3.webp" alt="Visual konser dan CARAT" class="h-[250px] w-full sm:h-[350px] sm:w-[700px] flex-none snap-center object-cover">
+                        <img src="media/jungkook.jpeg" alt="Visual konser dan CARAT" class="h-[250px] w-full sm:h-[350px] sm:w-[700px] flex-none snap-center object-cover">
+                    </div>
+
+                    <!-- KOLOM KANAN: TEKS + SHOW INFORMATION -->
+                    <div>
+                        <p class="text-lg leading-relaxed">
+                            One night. Thirteen voices. One unforgettable moment.
+                            A concert experience designed around music, energy, and CARAT.
+                        </p>
+
+                        <h3 class="mt-10 text-sm font-bold tracking-wider">SHOW INFORMATION</h3>
+
+                        <dl class="mt-6 grid grid-cols-2 gap-x-8 gap-y-6">
+                            <div class="rounded-2xl border border-white/15 bg-white/5 p-5 hover:bg-white/35">
+                                <dt class="text-sm font-bold ">DATE</dt>
+                                <dd class="mt-1">02 NOV 2026</dd>
+                            </div>
+
+                            <div class="rounded-2xl border border-white/15 bg-white/5 p-5 hover:bg-white/35">
+                                <dt class="text-sm font-bold">VENUE</dt>
+                                <dd class="mt-1">ICE BSD CITY</dd>
+                            </div>
+
+                            <div class="rounded-2xl border border-white/15 bg-white/5 p-5 hover:bg-white/35">
+                                <dt class="text-sm font-bold">CITY</dt>
+                                <dd class="mt-1">JAKARTA</dd>
+                            </div>
+
+                            <div class="rounded-2xl border border-white/15 bg-white/5 p-5 hover:bg-white/35">
+                                <dt class="text-sm font-bold">DOORS</dt>
+                                <dd class="mt-1">17:00 WIB</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="mx-auto min-h-[600px] max-w-[1440px] bg-[#e9d2aa] items-center gap-12 px-6 py-20">
+                <h2 class="font-serif text-4xl font-semibold leading-tight p-2">WHAT'S WAITING FOR YOU</h2>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 text-[#442310]">
+                    <article class="rounded-lg bg-[#f4f0e8] p-7 shadow-sm">
+                        <span class="text-[#e06e2d] font-bold">01</span>
+                        <h3 class="mt-2 text-2xl font-bold">LIVE PERFORMANCE</h3>
+                        <P class="mt-3 text-sm">13 members. One stage.</P>
+                    </article>
+                    <article class="rounded-lg bg-[#f4f0e8] p-7 shadow-sm">
+                        <span class="text-[#e06e2d] font-bold">02</span>
+                        <h3 class="mt-2 text-2xl font-bold">CARAT ZONE</h3>
+                        <P class="mt-3 text-sm">Moments make together.</P>
+                    </article>
+                    <article class="rounded-lg bg-[#f4f0e8] p-7 shadow-sm">
+                        <span class="text-[#e06e2d] font-bold">03</span>
+                        <h3 class="mt-2 text-2xl font-bold">SPECIAL MOMENTS</h3>
+                        <P class="mt-3 text-sm">Unexpected memories.</P>
+                    </article>
+                    <article class="rounded-lg bg-[#f4f0e8] p-7 shadow-sm">
+                        <span class="text-[#e06e2d] font-bold">04</span>
+                        <h3 class="mt-2 text-2xl font-bold">ENCORE</h3>
+                        <P class="mt-3 text-sm">AJUUUUU NICEEEEE</P>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TICKET -->
+        <section id="ticket" class="scroll-mt-[92px] relative overflow-hidden">
+            <div class="mx-auto min-h-808px max-w-1440px items-center gap-12 px-6 py-20">
+                <h2 class="font-serif text-4xl font-normal leading-tight p-2 text-[#e06e2d]">CHOOSE YOUR EXPERIENCE</h2>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <article class="flex min-h-[330px] flex-col bg-[#e8e0d2] p-7 text-[#442310]">
+                        <h3 class="text-xl font-bold">VIP</h3>
+                        <p class="mt-6 font-serif text-3xl">Rp 4.500.000</p>
+                        <p class="mt-4 text-sm text-[#9b8d7a]">Priority access · Exclusive benefits · Concert access</p>
+                        <a href="#buy" class="mt-auto bg-[#e06e2d] px-6 py-3 text-center text-xs font-bold text-[#f4f0e8] transition hover:brightness-110">SELECT TICKET</a>
+                    </article>
+                    <article class="flex min-h-[330px] flex-col bg-[#e8e0d2] p-7 text-[#442310]">
+                        <h3 class="text-xl font-bold">CAT 1</h3>
+                        <p class="mt-6 font-serif text-3xl">Rp 3.000.000</p>
+                        <p class="mt-4 text-sm text-[#9b8d7a]">Premium seating · Concert access</p>
+                        <a href="#buy" class="mt-auto bg-[#e06e2d] px-6 py-3 text-center text-xs font-bold text-[#f4f0e8] transition hover:brightness-110">SELECT TICKET</a>
+                    </article>
+                    <article class="flex min-h-[330px] flex-col bg-[#e8e0d2] p-7 text-[#442310]">
+                        <h3 class="text-xl font-bold">CAT 2</h3>
+                        <p class="mt-6 font-serif text-3xl">Rp 2.000.000</p>
+                        <p class="mt-4 text-sm text-[#9b8d7a]">Standard seating · Concert access</p>
+                        <a href="#buy" class="mt-auto bg-[#e06e2d] px-6 py-3 text-center text-xs font-bold text-[#f4f0e8] transition hover:brightness-110">SELECT TICKET</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+         <!-- FORM BUY -->
+        <section id="buy" class="scroll-mt-[92px] relative overflow-hidden bg-gradient-to-b from-[#442310] to-[#aaab85] text-white">
+            <div class="mx-auto min-h-808px max-w-1440px px-6 py-16">
+                <div class="grid gap-12">
+                    <div class="pt-8 text-white">
+                        <h2 class="max-w-xl font-serif text-5xl leading-tight">SECURE YOUR TICKET.</h2>
+                        <p class="mt-5 max-w-lg text-sm leading-relaxed text-white">
+                            Isi data untuk simulasi pembelian tiket. Form ini hanya untuk tampilan landing page.
+                        </p>
+                    </div>
+
+                    <form action="#" onsubmit="return false;" class="space-y-4">
+                        <div>
+                            <label for="full-name" class="text-11px font-bold text-white">FULL NAME</label>
+                            <input id="full-name" type="text" placeholder="Enter full name" class="mt-1 w-full border-0 bg-[#f4f0e8] px-5 py-3 text-sm text-[#442310] outline-none focus:ring-2 focus:ring-[#e06e2d]">
+                        </div>
+
+                        <div>
+                            <label for="email" class="text-11px font-bold text-white">EMAIL</label>
+                            <input id="email" type="email" placeholder="Enter email" class="mt-1 w-full border-0 bg-[#f4f0e8] px-5 py-3 text-sm text-[#442310] outline-none focus:ring-2 focus:ring-[#e06e2d]">
+                        </div>
+
+                        <div>
+                            <label for="ticket-category" class="text-11px font-bold text-white">TICKET CATEGORY</label>
+                            <select id="ticket-category" class="mt-1 w-full border-0 bg-[#f4f0e8] px-5 py-3 text-sm text-[#442310] outline-none focus:ring-2 focus:ring-[#e06e2d]">
+                                <option>VIP - Rp 4.500.000</option>
+                                <option>CAT 1 - Rp 3.000.000</option>
+                                <option>CAT 2 - Rp 2.000.000</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="quantity" class="text-11px font-bold text-white">QUANTITY</label>
+                            <input id="quantity" type="number" min="1" max="4" value="1" class="mt-1 w-full border-0 bg-[#f4f0e8] px-5 py-3 text-sm text-[#442310] outline-none focus:ring-2 focus:ring-[#e06e2d]">
+                        </div>
+
+                        <button type="submit" class="mt-2 bg-[#442310] px-10 py-4 text-xs font-bold text-white transition hover:bg-[#5c3017]">BUY TICKET</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+         <!-- GALLERY -->
+        <section id="gallery" class="scroll-mt-[92px] relative overflow-hidden">
+            <div class="mx-auto min-h-[1696px] max-w-1440px bg-[url(media/svt.png)] bg-cover bg-center items-center gap-12 px-6 py-20">
+                <div class="mb-12 flex flex-col gap-4">
+                    <h2 class="mt-3 font-sans font-bold text-4xl text-center text-white shadow-2xl">
+                        13 MEMBERS, 3 UNITS, 1 TEAM
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-4 gap-2 sm:gap-3 lg:gap-6">
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/S.Coups_SEVENTEEN_27_WORLD_TOUR.webp" alt="S.COUPS" title="S.COUPS" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">S.COUPS</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/Jeonghan_SEVENTEEN_27_WORLD_TOUR.webp" alt="JEONGHAN" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">JEONGHAN</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/Joshua_SEVENTEEN_27_WORLD_TOUR.webp" alt="JOSHUA" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">JOSHUA</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/Jun_SEVENTEEN_27_WORLD_TOUR.webp" alt="JUN" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">JUN</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/Hoshi_SEVENTEEN_27_WORLD_TOUR.webp" alt="HOSHI" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">HOSHI</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/Woozi_SEVENTEEN_27_WORLD_TOUR.webp" alt="WOOZI" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">WOOZI</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/Wonwoo_SEVENTEEN_27_WORLD_TOUR.webp" alt="WONWOO" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">WONWOO</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/The8_SEVENTEEN_27_WORLD_TOUR.webp" alt="THE8" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">THE8</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/Mingyu_SEVENTEEN_27_WORLD_TOUR.webp" alt="MINGYU" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">MINGYU</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/DK_SEVENTEEN_27_WORLD_TOUR.webp" alt="DK" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">DK</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/Seungkwan_SEVENTEEN_27_WORLD_TOUR.webp" alt="SEUNGKWAN" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">SEUNGKWAN</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/Vernon_SEVENTEEN_27_WORLD_TOUR.webp" alt="VERNON" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">VERNON</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/Dino_SEVENTEEN_27_WORLD_TOUR.webp" alt="DINO" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">DINO</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/vocal.webp" alt="VOCAL" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">VOCAL UNIT</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/pepo.jpg" alt="PERFORMANCE" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">PERFORMANCE UNIT</span>
+                        </div>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-3xl"><img src="media/hiphop.webp" alt="HIPHOP" class="h-[180px] w-full object-cover sm:h-[240px] lg:h-[420px]">
+                        <div class="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-xl font-bold text-[#442310]">HIPHOP UNIT</span>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <!-- FOOTER -->
+    <footer class="bg-[#442310] text-white">
+        <section class="mx-auto min-h-92px max-w-[1440px] px-6 py-16">
+            <div class="flex flex-col gap-8 p-2 sm:flex-row sm:justify-between">
+                <div>
+                    <h2 class="font-serif text-3xl">RIGHT HERE.</h2>
+                    <p class="mt-4 text-lg font-semibold">ONE NIGHT. ONE SEVENTEEN.</p>
+                    <a href="#buy" class="mt-7 inline-flex rounded-full bg-[#e06e2d] px-8 py-3 text-xs font-bold text-[#3f1d47] transition hover:brightness-110">GET YOUR TICKET</a>
+                </div>
+
+                <div class="">
+                    <div class="flex gap-6 text-sm font-bold">
+                        <a href="https://www.instagram.com/saythename_17/" target="_blank" class="transition hover:text-[#e06e2d]">INSTAGRAM</a>
+
+                        <a href="https://www.youtube.com/@pledis17" target="_blank" class="transition hover:text-[#e06e2d]">YOUTUBE</a>
+
+                        <a href="https://weverse.io/seventeen" target="_blank" class="transition hover:text-[#e06e2d]">WEVERSE</a>
+                    </div>
+                    <p class="mt-4 text-sm text-[#c8b9a3]">JAKARTA · INDONESIA</p>
+                    <p class="mt-2 text-sm text-[#c8b9a3]">&copy; 2026 RIGHT HERE</p>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script>function toggleMenu() {const menu = document.getElementById('mobile-menu');menu.classList.toggle('hidden');}</script>
+</body>
+</html>
