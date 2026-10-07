@@ -1,0 +1,13 @@
+.app {
+  display: grid; grid-template-columns: 200px 1fr;
+  max-width: 1200px; margin: 24px auto;
+  background: var(--putih); border-radius: 20px; overflow: hidden;
+}
+.sidebar { padding: 24px 16px; border-right: 1px solid var(--garis); }
+.logo { color: var(--aksen); margin-bottom: 24px; }
+.menu a {
+  display: block; padding: 10px 14px; border-radius: 10px;
+  color: #6b7390; text-decoration: none;
+}
+
+.menu a:hover { background: #eceffa; color: var(--aksen); }
