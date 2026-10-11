@@ -1,0 +1,298 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    background-color: #fefefe;
+    color: #26352e;
+}
+
+header {
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #2d6954;
+    color: white;
+    border-bottom: 5px solid #26352e;
+}
+
+header h1 {
+    margin: 0 0 0px;
+    font-size: 30px;
+}
+
+header p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Navigasi tetap terlihat saat halaman di-scroll */
+nav {
+    padding: 15px 20px;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid #26352e;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav hr, main > hr, main > section + hr + hr {
+    display: none;
+}
+
+nav a {
+    display: inline-block;
+    margin: 4px 6px;
+    padding: 8px 14px;
+    color: #2d6954;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: #2d6954;
+    color: white;
+}
+
+/* min() memilih nilai lebar yang lebih kecil */
+main {
+    width: min(1100px, 95%);
+    margin: 30px auto;
+}
+
+#beranda, #tentang, #galeri, #info {
+    margin-bottom: 28px;
+    padding: 28px;
+    background-color: white;
+    border: 1px solid #26352e;
+    border-radius: 14px;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #2d6954;
+    text-align: center;
+}
+
+section h3 {
+    color: #3f765f;
+    margin-bottom: 5px;
+}
+
+#beranda > img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 20px auto;
+    border: 5px solid #fefefe;
+    border-radius: 12px;
+}
+
+#beranda p {
+    text-align: justify;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#tentang ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 0;
+    list-style: none;
+}
+
+#tentang li {
+    /* Item dapat membesar/mengecil dengan ukuran dasar 220px */
+    flex: 1 1 220px;
+    margin: 0;
+    padding: 18px;
+    background-color: #fefefe;
+    border: 1px solid #26352e;
+    border-radius: 12px;
+}
+
+/* Grid digunakan untuk menyusun galeri menjadi 2 kolom */
+#galeri {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+#galeri h2 {
+    grid-column: 1 / -1;
+}
+
+/* Mengatur tampilan video YouTube */
+#galeri iframe {
+    grid-column: 1 / -1;
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: 394px;
+    margin: 0 auto 10px;
+    border-radius: 12px;
+    border: 3px solid #26352e;
+}
+
+figure {
+    margin: 0;
+    padding: 12px;
+    background-color: #fefefe;
+    border: 1px solid #26352e;
+    border-radius: 12px;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+figcaption {
+    padding: 10px 4px 2px;
+    text-align: center;
+    font-size: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 25px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #26352e;
+    text-align: left;
+}
+
+th {
+    background-color: #2d6954;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+fieldset {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #26352e;
+    border-radius: 12px;
+}
+
+legend {
+    padding: 0 10px;
+    text-align: center;
+    color: #2d6954;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input, select, textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 650px;
+    margin-top: 5px;
+    padding: 11px;
+    border: 1px solid #a9c8b9;
+    border-radius: 10px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #79b7db;
+    border-color: #2d6954;
+}
+
+button {
+    padding: 11px 24px;
+    border: 0;
+    border-radius: 7px;
+    background-color: #2d6954;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f4d3d;
+}
+
+footer {
+    margin-top: 35px;
+    padding: 25px 20px;
+    text-align: center;
+    background-color: #2d6954;
+    color: white;
+}
+
+/* Tampilan khusus untuk layar dengan lebar maksimal 700px */
+@media (max-width: 700px) {
+    header {
+        padding: 40px 15px;
+    }
+    header h1 {
+        font-size: 20px;
+    }
+    nav a {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    #beranda, #tentang, #galeri, #info {
+        padding: 18px;
+    }
+    /* Galeri menjadi satu kolom pada layar kecil */
+    #galeri {
+        grid-template-columns: 1fr;
+    }
+    #galeri h {
+        grid-column: auto;
+    }
+    /* Membuat video YouTube mengikuti ukuran layar */
+    #galeri iframe {
+        grid-column: 1 / -1;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    figure img {
+        height: auto;
+        max-height: 350px;
+    }
+    table {
+        font-size: 10px;
+    }
+    th, td {
+        padding: 8px;
+    }
+    fieldset {
+        width: 94%;
+        padding: 18px;
+    }
+}
