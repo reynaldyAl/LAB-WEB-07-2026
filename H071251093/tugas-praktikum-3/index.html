@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sirat Malam — Malam Musik Indie & Alternative</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['Anton', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+</head>
+<body class="bg-[#0D0C0F] text-[#F3EFE7] font-body antialiased">
+
+  <nav class="fixed top-0 inset-x-0 z-50 bg-[#0D0C0F]/90 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <span class="font-display text-xl tracking-wide text-[#F2A93B]">SIRAT MALAM</span>
+      <div class="hidden md:flex items-center gap-8 text-sm text-[#F3EFE7]/80">
+        <a href="#beranda" class="hover:text-[#F2A93B] transition-colors">Beranda</a>
+        <a href="#tentang" class="hover:text-[#F2A93B] transition-colors">Tentang</a>
+        <a href="#lineup" class="hover:text-[#F2A93B] transition-colors">Lineup</a>
+        <a href="#tiket" class="hover:text-[#F2A93B] transition-colors">Tiket</a>
+      </div>
+      <a href="#tiket" class="hidden md:inline-block bg-[#F2A93B] text-[#0D0C0F] text-sm font-semibold px-5 py-2 rounded-full hover:bg-[#F5BC5F] transition-colors">Pesan Tiket</a>
+      <button class="md:hidden w-9 h-9 flex flex-col justify-center items-center gap-1.5">
+        <span class="w-6 h-0.5 bg-[#F3EFE7]"></span>
+        <span class="w-6 h-0.5 bg-[#F3EFE7]"></span>
+        <span class="w-6 h-0.5 bg-[#F3EFE7]"></span>
+      </button>
+    </div>
+  </nav>
+
+  <header id="beranda" class="relative pt-40 pb-28 px-6 overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#E23E3E]/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-40 -left-20 w-72 h-72 bg-[#F2A93B]/10 rounded-full blur-3xl"></div>
+    <div class="max-w-6xl mx-auto relative">
+      <p class="text-[#F2A93B] text-sm tracking-wide mb-4">28 November 2026 · Fort Rotterdam (Benteng Rotterdam), Makassar</p>
+      <h1 class="font-display text-6xl sm:text-7xl md:text-8xl leading-[0.95] text-[#F3EFE7]">
+        SATU MALAM,<br />
+        <span class="text-[#F2A93B]">RIBUAN CERITA.</span>
+      </h1>
+      <p class="mt-8 max-w-md text-[#F3EFE7]/70 text-lg">
+        Enam guest star indie dan alternative dari Makassar naik satu panggung, di bawah langit terbuka, dengan tata suara yang dibangun untuk didengar dekat.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#tiket" class="bg-[#F2A93B] text-[#0D0C0F] font-semibold px-8 py-3.5 rounded-full hover:bg-[#F5BC5F] transition-colors">Pesan Tiket Sekarang</a>
+        <a href="#lineup" class="border border-white/20 text-[#F3EFE7] font-semibold px-8 py-3.5 rounded-full hover:border-[#F2A93B] hover:text-[#F2A93B] transition-colors">Lihat Lineup</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="tentang" class="px-6 py-24 border-t border-white/10">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="font-display text-4xl text-[#F3EFE7] mb-6">Bukan festival besar. Ini panggung yang dekat.</h2>
+        <p class="text-[#F3EFE7]/70 leading-relaxed mb-4">
+          Sirat Malam lahir dari keresahan yang sama: musik indie di Makassar butuh panggung yang bukan sekadar acara sampingan. Kami membangun satu malam penuh, dengan kapasitas terbatas, supaya setiap penonton benar-benar dekat dengan musik yang dimainkan.
+        </p>
+        <p class="text-[#F3EFE7]/70 leading-relaxed">
+          Rooftop, lampu temaram, dan enam guest star yang dipilih langsung oleh kurator musik lokal. Tidak ada layar besar, tidak ada jarak yang jauh dari panggung.
+        </p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-10">
+        <p class="font-display text-5xl text-[#F2A93B] mb-2">6</p>
+        <p class="text-[#F3EFE7]/70 mb-6">guest star tampil dalam satu malam</p>
+        <p class="font-display text-5xl text-[#F2A93B] mb-2">500</p>
+        <p class="text-[#F3EFE7]/70 mb-6">kapasitas penonton, dijaga tetap intim</p>
+        <p class="font-display text-5xl text-[#F2A93B] mb-2">1</p>
+        <p class="text-[#F3EFE7]/70">panggung, tanpa jeda panjang antar guest star</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="lineup" class="px-6 py-24 border-t border-white/10 bg-white/[0.02]">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-display text-4xl text-[#F3EFE7] mb-12">Siapa yang naik panggung</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <div class="bg-[#0D0C0F] border border-white/10 rounded-2xl p-6 hover:border-[#F2A93B]/50 transition-colors">
+          <p class="text-xs text-[#F2A93B] mb-2">Indie Pop</p>
+          <h3 class="font-display text-2xl mb-2">Alkateri</h3>
+          <p class="text-[#F3EFE7]/60 text-sm">Bawa romansa kota dan atmosfer melankolis, Alkateri siap mengajak Anda tenggelam dalam harmoni musik yang intim dan mendalam.</p>
+        </div>
+
+        <div class="bg-[#0D0C0F] border border-white/10 rounded-2xl p-6 hover:border-[#F2A93B]/50 transition-colors">
+          <p class="text-xs text-[#F2A93B] mb-2">Indie Rock</p>
+          <h3 class="font-display text-2xl mb-2">The Adams</h3>
+          <p class="text-[#F3EFE7]/60 text-sm">Rasakan energi distorsi gitar dan harmoni vokal khas The Adams, pionir indie rock ibu kota yang lagunya selalu melekat lintas generasi.</p>
+        </div>
+
+        <div class="bg-[#0D0C0F] border border-white/10 rounded-2xl p-6 hover:border-[#F2A93B]/50 transition-colors">
+          <p class="text-xs text-[#F2A93B] mb-2">Indie Rock</p>
+          <h3 class="font-display text-2xl mb-2">FSTVLST</h3>
+          <p class="text-[#F3EFE7]/60 text-sm">Unit indie rock legendaris asal Yogyakarta, FSTVLST, siap membakar panggung lewat distorsi tegas dan lirik puitis sarat kritik. Bersiaplah menggemakan semangat "Almost Rock Bareng-Bareng" di area festival!</p>
+        </div>
+
+        <div class="bg-[#0D0C0F] border border-white/10 rounded-2xl p-6 hover:border-[#F2A93B]/50 transition-colors">
+          <p class="text-xs text-[#F2A93B] mb-2">Indie Pop</p>
+          <h3 class="font-display text-2xl mb-2">Rumahsakit</h3>
+          <p class="text-[#F3EFE7]/60 text-sm"> Rasakan kembali atmosfer indie pop dan Britpop legendaris bersama rumahsakit lewat koor massal yang emosional di lagu-lagu abadi mereka seperti "Hilang" dan "Kuning".</p>
+        </div>
+
+        <div class="bg-[#0D0C0F] border border-white/10 rounded-2xl p-6 hover:border-[#F2A93B]/50 transition-colors">
+          <p class="text-xs text-[#F2A93B] mb-2">Indie Rock</p>
+          <h3 class="font-display text-2xl mb-2">Perunggu</h3>
+          <p class="text-[#F3EFE7]/60 text-sm">Trio alternative rock kebanggaan pekerja ibu kota, Perunggu, siap menyuarakan dinamika kehidupan lewat distorsi megah dan lirik kontemplatif yang sarat emosi.</p>
+        </div>
+
+        <div class="bg-[#0D0C0F] border border-white/10 rounded-2xl p-6 hover:border-[#F2A93B]/50 transition-colors">
+          <p class="text-xs text-[#F2A93B] mb-2">Indie Rock</p>
+          <h3 class="font-display text-2xl mb-2">Reality Club</h3>
+          <p class="text-[#F3EFE7]/60 text-sm">Unit indie rock kebanggaan global asal Jakarta, Reality Club, siap memukau lewat aksi panggung teatrikal dan deretan hits sinematik lintas genre mereka seperti "Anything You Want" dan "Am I Bothering You?".</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 py-24 border-t border-white/10">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-display text-4xl text-[#F3EFE7] mb-12">Cerita dari malam sebelumnya</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="border-l-2 border-[#F2A93B] pl-6">
+          <p class="text-[#F3EFE7]/80 text-lg leading-relaxed mb-4">Jarang ada acara musik indie di Makassar yang rasanya sedekat ini sama penonton. Suaranya jernih, dan tidak ada rasa terburu-buru antar penampil.</p>
+          <p class="text-sm text-[#F3EFE7]/50">Rani, penonton edisi pertama</p>
+        </div>
+        <div class="border-l-2 border-[#F2A93B] pl-6">
+          <p class="text-[#F3EFE7]/80 text-lg leading-relaxed mb-4">Kapasitas yang dibatasi ternyata bikin bedanya jauh. Semua orang benar-benar hadir, bukan cuma nongkrong di belakang.</p>
+          <p class="text-sm text-[#F3EFE7]/50">Fadli, penonton edisi pertama</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tiket" class="px-6 py-24 border-t border-white/10 bg-white/[0.02]">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-4xl text-[#F3EFE7] mb-3">Amankan tempatmu</h2>
+      <p class="text-[#F3EFE7]/60 mb-10">Kapasitas terbatas 500 orang. Isi data di bawah, tim kami akan mengirim konfirmasi lewat email.</p>
+
+      <form class="space-y-5">
+        <div>
+          <label class="block text-sm text-[#F3EFE7]/70 mb-2">Nama Lengkap</label>
+          <input type="text" placeholder="Nama kamu" class="w-full bg-[#0D0C0F] border border-white/15 rounded-xl px-4 py-3 text-[#F3EFE7] placeholder-[#F3EFE7]/30 focus:outline-none focus:border-[#F2A93B]" />
+        </div>
+        <div>
+          <label class="block text-sm text-[#F3EFE7]/70 mb-2">Email</label>
+          <input type="email" placeholder="nama@email.com" class="w-full bg-[#0D0C0F] border border-white/15 rounded-xl px-4 py-3 text-[#F3EFE7] placeholder-[#F3EFE7]/30 focus:outline-none focus:border-[#F2A93B]" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-sm text-[#F3EFE7]/70 mb-2">Kategori Tiket</label>
+            <select class="w-full bg-[#0D0C0F] border border-white/15 rounded-xl px-4 py-3 text-[#F3EFE7] focus:outline-none focus:border-[#F2A93B]">
+              <option>Reguler — Rp 213.000</option>
+              <option>VIP (Front Stage) — Rp 269.000</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm text-[#F3EFE7]/70 mb-2">Jumlah Tiket</label>
+            <input type="number" min="1" value="1" class="w-full bg-[#0D0C0F] border border-white/15 rounded-xl px-4 py-3 text-[#F3EFE7] focus:outline-none focus:border-[#F2A93B]" />
+          </div>
+        </div>
+        <button type="button" class="w-full bg-[#F2A93B] text-[#0D0C0F] font-semibold py-3.5 rounded-xl hover:bg-[#F5BC5F] transition-colors">Amankan Tiket</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="px-6 py-16 border-t border-white/10">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div>
+        <p class="font-display text-xl text-[#F2A93B] mb-3">SIRAT MALAM</p>
+        <p class="text-[#F3EFE7]/50 text-sm">Fort Rotterdam (Benteng Rotterdam), Makassar</p>
+      </div>
+      <div>
+        <p class="text-sm text-[#F3EFE7]/70 mb-3">Kontak</p>
+        <p class="text-[#F3EFE7]/50 text-sm">halo@siratmalam.id</p>
+        <p class="text-[#F3EFE7]/50 text-sm">+62 812-3456-7890</p>
+      </div>
+      <div>
+        <p class="text-sm text-[#F3EFE7]/70 mb-3">Ikuti</p>
+        <div class="flex gap-4 text-[#F3EFE7]/50 text-sm">
+          <a href="#" class="hover:text-[#F2A93B]">Instagram</a>
+          <a href="#" class="hover:text-[#F2A93B]">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-white/10 text-xs text-[#F3EFE7]/40">
+      © 2026 Sirat Malam. Semua hak dilindungi.
+    </div>
+  </footer>
+
+</body>
+</html>
