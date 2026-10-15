@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papan Tugas Tim Marsha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: "#6d5dfc",
+            surface: "#f4f6fd",
+            ink: "#1f2547",
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', "ui-sans-serif", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #b8dcff 0%, #8fa4ff 55%, #5c5cff 100%) fixed;
+    }
+
+    /* Warna avatar anggota: ungu, biru, oranye, pink (mengikuti referensi) */
+    .g0 { background: linear-gradient(135deg, #8f5cf5, #b684ff); }
+    .g1 { background: linear-gradient(135deg, #5f73f0, #86a0ff); }
+    .g2 { background: linear-gradient(135deg, #f08a00, #ffb02e); }
+    .g3 { background: linear-gradient(135deg, #e84fc0, #ff8ae0); }
+
+    /* Penanda anggota terpilih (ditambah lewat classList.add di script.js) */
+    .member-btn.is-active,
+    .member-btn.is-active:hover {
+      background-color: #6d5dfc;
+      color: #ffffff;
+    }
+
+    .bar-fill { background: linear-gradient(90deg, #8f5cf5, #5f8bff); }
+    .btn-grad { background: linear-gradient(135deg, #8f5cf5, #5f73f0); }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+
+<body class="p-3 font-sans text-ink antialiased sm:p-8">
+  <div class="mx-auto flex max-w-7xl overflow-hidden rounded-[28px] bg-surface shadow-2xl shadow-indigo-900/20">
+
+    <!-- Sidebar -->
+    <aside class="hidden w-56 shrink-0 flex-col bg-white p-6 md:flex">
+      <div class="flex items-center gap-2.5">
+        <span class="btn-grad h-7 w-7 rounded-full"></span>
+        <span class="text-xl font-extrabold tracking-tight">Tim Marsha</span>
+      </div>
+
+      <p class="mt-10 text-xs font-semibold text-ink/50">Menu</p>
+      <nav class="mt-3 flex flex-col gap-1 text-sm font-semibold">
+        <a href="#anggota" class="rounded-xl bg-brand/10 px-3 py-2.5 text-brand">Anggota tim</a>
+        <a href="#tugas" class="rounded-xl px-3 py-2.5 text-ink/70 hover:bg-surface">Tugas</a>
+      </nav>
+
+      <div class="mt-auto flex items-center gap-3 pt-10">
+        <span class="btn-grad flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white">M</span>
+        <div class="leading-tight">
+          <p class="text-sm font-bold">Marsha</p>
+          <p class="text-xs text-ink/50">Ketua tim</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Konten utama -->
+    <main class="min-w-0 flex-1 p-5 sm:p-8">
+      <header>
+        <h1 class="text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+          <span class="text-brand">Tugas tim,</span><br />
+          tanpa tanya-tanya.
+        </h1>
+      </header>
+
+      <!-- Anggota di kiri, tugas di kanan (satu kolom di layar kecil) -->
+      <div class="mt-8 grid gap-6 xl:grid-cols-2 xl:items-stretch">
+
+        <!-- F1: Daftar anggota -->
+        <section id="anggota" class="scroll-mt-6 min-w-0 rounded-3xl bg-white p-5 sm:p-6" aria-labelledby="membersHeading">
+          <h2 id="membersHeading" class="text-2xl font-extrabold tracking-tight sm:text-3xl">Anggota tim</h2>
+          <p id="membersStatus" role="status" class="mt-3 text-base font-semibold text-brand"></p>
+
+          <div id="membersTable" class="mt-4 hidden overflow-hidden rounded-2xl border border-surface">
+            <table class="w-full text-left">
+              <caption class="sr-only">Daftar anggota tim</caption>
+              <thead>
+                <tr class="text-xs font-semibold text-ink/50">
+                  <th scope="col" class="w-14 bg-white px-4 py-3">No</th>
+                  <th scope="col" class="bg-white px-2 py-3">Nama anggota</th>
+                </tr>
+              </thead>
+              <tbody id="membersList" class="divide-y divide-surface"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- F2 - F5: Tugas anggota -->
+        <section id="tugas" class="scroll-mt-6 min-w-0 rounded-3xl bg-white p-5 sm:p-6" aria-labelledby="taskTitle">
+          <h2 id="taskTitle" class="text-2xl font-extrabold tracking-tight sm:text-3xl">Tugas</h2>
+
+          <p id="taskPlaceholder" class="mt-3 text-base font-medium text-ink/60">
+            Pilih salah satu anggota di sebelah kiri untuk melihat tugasnya.
+          </p>
+
+          <p id="taskStatus" role="status" class="mt-3 hidden text-base font-semibold"></p>
+
+          <div id="taskBody" class="hidden">
+
+            <!-- Ringkasan progres -->
+            <p id="summary" class="mt-4 text-2xl font-extrabold tracking-tight text-brand sm:text-3xl"></p>
+            <div class="mt-3 h-3 w-full overflow-hidden rounded-full bg-surface" aria-hidden="true">
+              <div id="progressBar" class="bar-fill h-full w-0 rounded-full transition-[width] duration-300"></div>
+            </div>
+
+            <!-- F4: Form tambah tugas -->
+            <form id="taskForm" class="mt-5 rounded-2xl bg-surface p-4" novalidate>
+              <label for="titleInput" class="text-sm font-bold">Tambah tugas baru</label>
+              <div class="mt-2 flex flex-col gap-3 sm:flex-row">
+                <input
+                  id="titleInput"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Tulis judul tugas..."
+                  class="w-full flex-1 rounded-full border-2 border-transparent bg-white px-5 py-3 text-base font-medium placeholder:text-ink/40 focus:border-brand focus:outline-none"
+                />
+                <button
+                  id="submitBtn"
+                  type="submit"
+                  class="btn-grad rounded-full px-8 py-3 text-base font-bold text-white hover:opacity-90 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-wait disabled:opacity-60"
+                >Simpan</button>
+              </div>
+              <p id="formError" role="alert" class="mt-3 hidden text-sm font-semibold text-red-600"></p>
+            </form>
+
+            <!-- F3: Pencarian -->
+            <div class="mt-4">
+              <label for="searchInput" class="sr-only">Cari tugas berdasarkan judul</label>
+              <input
+                id="searchInput"
+                type="search"
+                autocomplete="off"
+                placeholder="Cari judul tugas..."
+                class="w-full rounded-full border-2 border-surface bg-surface px-5 py-3 text-base font-medium placeholder:text-ink/40 focus:border-brand focus:bg-white focus:outline-none"
+              />
+            </div>
+
+            <p id="emptyMessage" class="mt-4 hidden text-base font-semibold text-ink/60"></p>
+
+            <!-- Tabel tugas: bisa digulir di dalam kotaknya sendiri -->
+            <div class="mt-4 max-h-[24rem] overflow-y-auto rounded-2xl border border-surface">
+              <table class="w-full text-left">
+                <caption class="sr-only">Daftar tugas anggota</caption>
+                <thead>
+                  <tr class="text-xs font-semibold text-ink/50">
+                    <th scope="col" class="sticky top-0 w-14 bg-white px-4 py-3">Status</th>
+                    <th scope="col" class="sticky top-0 bg-white px-2 py-3">Judul tugas</th>
+                    <th scope="col" class="sticky top-0 bg-white px-4 py-3 text-right">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody id="taskList" class="divide-y divide-surface"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- F4: Notifikasi sukses -->
+  <div
+    id="toast"
+    role="status"
+    class="fixed bottom-5 left-1/2 hidden -translate-x-1/2 rounded-full bg-ink px-6 py-3 text-sm font-bold text-white shadow-lg"
+  ></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
