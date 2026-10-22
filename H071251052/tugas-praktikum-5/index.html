@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Tugas Tim</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen text-gray-800">
+    <div class="max-w-6xl mx-auto p-5">
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold">Manajemen Tugas Tim</h1>
+            <p class="text-gray-500 mt-2">Daftar anggota dan tugas yang sedang dikerjakan.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+            <section class="bg-white p-5 rounded-xl shadow">
+                <h2 class="text-xl font-bold mb-4">Daftar Anggota</h2>
+
+                <p id="loadingAnggota" class="text-blue-600">Memuat anggota...</p>
+                <p id="errorAnggota" class="text-red-600 mb-3"></p>
+                <div id="daftarAnggota" class="flex flex-col gap-2"></div>
+            </section>
+
+            <section class="md:col-span-2 bg-white p-5 rounded-xl shadow">
+                <h2 id="judulTugas" class="text-xl font-bold mb-2">Pilih Anggota</h2>
+
+                <p id="loadingTugas" class="text-blue-600 mb-2"></p>
+                <p id="errorTugas" class="text-red-600 mb-2"></p>
+
+                <p id="progres" class="text-gray-600 mb-4">0 dari 0 tugas selesai</p>
+
+                <div class="mb-4">
+                    <label for="cariTugas" class="block font-medium mb-2">Cari Tugas</label>
+
+                    <input type="text" id="cariTugas" placeholder="Masukkan judul tugas..." class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <p id="tidakAdaTugas" class="text-gray-500 mb-3"></p>
+
+                <div id="daftarTugas" class="flex flex-col gap-3"></div>
+
+                <hr class="my-6">
+
+                <h3 class="text-lg font-bold mb-3">Tambah Tugas Baru</h3>
+
+                <form id="formTugas" class="flex flex-col gap-3">
+                    <input type="text" id="judulBaru" placeholder="Judul tugas minimal 5 karakter" class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                    <button type="submit" id="tombolSimpan" class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700">Simpan</button>
+                </form>
+
+                <p id="pesanForm" class="text-red-600 mt-3"></p>
+                <p id="notifikasi" class="text-green-600 mt-3"></p>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
