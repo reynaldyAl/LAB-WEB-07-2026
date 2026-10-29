@@ -1,0 +1,16 @@
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+.kartu { color: var(--putih); border-radius: var(--radius); padding: 18px; }
+.kartu--lulus { background: linear-gradient(135deg, #80B155, #C1D95C); }
+.kartu--gagal { background: linear-gradient(135deg, #e9778c, #f4a9a0); }
+.kartu p { font-size: 1.8rem; font-weight: 800; }
+
+.tabel-wrap { background: var(--putih); border-radius: var(--radius); overflow-x: auto; }
+.tabel { width: 100%; border-collapse: collapse; }
+.tabel th, .tabel td { padding: 12px 16px; text-align: left; white-space: nowrap; }
+.tabel th { color: #6b7390; font-weight: 600; border-bottom: 1px solid var(--garis); }
+.tabel td { border-bottom: 1px solid var(--garis); }
+
+.titik { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 8px; }
+.titik--lulus { background: var(--lulus); }
+.titik--gagal { background: var(--gagal); }

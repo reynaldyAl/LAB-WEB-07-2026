@@ -1,0 +1,23 @@
+:root {
+  --tinta: #2b3350;
+  --kertas: #dde1ec;
+  --putih: #ffffff;
+  --garis: #e4e7f1;
+  --aksen: #6f7fb8;
+  --lulus: #80B155;
+  --lulus-muda: #def3ea;
+  --gagal: #e9778c;
+  --gagal-muda: #fbe6dd;
+  --radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  background: var(--kertas);
+  color: var(--tinta);
+  line-height: 1.6;
+}
+a:focus-visible, label:focus-visible { outline: 3px solid var(--aksen); outline-offset: 3px; }
+.footer { text-align: center; padding: 32px 16px; color: #5b6b7b; font-size: .9rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
