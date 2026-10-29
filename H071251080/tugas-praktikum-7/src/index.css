@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-senja-900 font-sans text-senja-50 antialiased;
+  }
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid #c8742f;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Tepi bawah struk yang bergerigi seperti kertas sobekan */
+  .tepi-sobek {
+    position: relative;
+  }
+  .tepi-sobek::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 12px;
+    background:
+      linear-gradient(135deg, #fdf8f3 50%, transparent 50%) left top / 16px 12px repeat-x,
+      linear-gradient(225deg, #fdf8f3 50%, transparent 50%) left top / 16px 12px repeat-x;
+  }
+}
