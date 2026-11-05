@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Palet "senja": kertas hangat, tinta malam, dan cahaya jingga matahari terbenam. */
+@theme {
+  --color-kertas: #fbf6ec;
+  --color-kertas-tua: #f2e8d5;
+  --color-garis: #e6d9c0;
+  --color-tinta: #1f1838;
+  --color-tinta-2: #5d5672;
+  --color-malam: #181233;
+  --color-ungu: #3a2a66;
+  --color-senja: #ee8a3c;
+  --color-senja-tua: #b4540f;
+  --color-emas: #f6c177;
+
+  --color-lagun-500: #25808a;
+  --color-lagun-800: #12474f;
+  --color-plum-500: #9a3f72;
+  --color-plum-800: #5e2146;
+  --color-gading-500: #c48a1b;
+  --color-gading-800: #7a5410;
+
+  --font-serif: "Fraunces Variable", Georgia, serif;
+  --font-sans: "Instrument Sans Variable", system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-emas);
+  color: var(--color-malam);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
