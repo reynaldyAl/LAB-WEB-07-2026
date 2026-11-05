@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obelix Sea View — Wisata Tebing Gunungkidul, Yogyakarta</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          },
+          colors: {
+            ocean: {
+              950: '#040D1A',
+              900: '#0A1628',
+              800: '#0F2340',
+              700: '#163360',
+            },
+            teal: {
+              500: '#0E7490',
+              400: '#0891B2',
+              300: '#22D3EE',
+            },
+            gold: {
+              500: '#F59E0B',
+              400: '#FBBF24',
+              300: '#FCD34D',
+            },
+          },
+          screens: {
+            'xs': '390px',
+            'sm': '486px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-body bg-ocean-950 text-white antialiased">
+
+  <!-- ================================================
+       NAVBAR
+       ================================================ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-ocean-950/85 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#beranda" class="font-display text-xl font-bold text-gold-400 hover:text-gold-300 transition-colors ">
+        Obelix Sea View
+      </a>
+
+      <!-- Desktop menu -->
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-white/65">
+        <a href="#beranda"    class="hover:text-gold-400 transition-colors">Beranda</a>
+        <a href="#galeri"     class="hover:text-gold-400 transition-colors">Galeri</a>
+        <a href="#aktivitas"  class="hover:text-gold-400 transition-colors">Aktivitas</a>
+        <a href="#lokasi"     class="hover:text-gold-400 transition-colors">Lokasi</a>
+        <a href="#informasi"  class="hover:text-gold-400 transition-colors">Tiket</a>
+        <a href="#formulir"   class="hover:text-gold-400 transition-colors">Reservasi</a>
+        <a href="#multimedia" class="hover:text-gold-400 transition-colors">Video</a>
+      </div>
+
+      <!-- CTA desktop -->
+      <a href="#formulir"
+         class="hidden md:inline-block bg-gold-500 hover:bg-gold-400 text-ocean-950 font-semibold text-sm px-5 py-2 rounded-full transition-colors">
+        Reservasi
+      </a>
+
+      <!-- Menu hamburger (≤md) - tanpa JavaScript, memakai <details> + Tailwind -->
+      <details class="group md:hidden">
+        <summary aria-label="Buka menu navigasi"
+          class="list-none [&::-webkit-details-marker]:hidden flex flex-col gap-1.5 p-2 shrink-0 cursor-pointer">
+          <span class="block w-6 h-0.5 bg-gold-400 rounded-full transition-all duration-300 origin-center group-open:rotate-45 group-open:translate-y-2"></span>
+          <span class="block w-6 h-0.5 bg-gold-400 rounded-full transition-all duration-300 group-open:opacity-0"></span>
+          <span class="block w-6 h-0.5 bg-gold-400 rounded-full transition-all duration-300 origin-center group-open:-rotate-45 group-open:-translate-y-2"></span>
+        </summary>
+
+        <!-- Dropdown menu mobile -->
+        <div class="absolute left-0 right-0 top-full flex flex-col bg-ocean-900/95 backdrop-blur-md border-t border-white/10 px-5 pb-5 pt-3 gap-1">
+          <a href="#beranda"    class="block py-2.5 text-sm text-white/70 hover:text-gold-400 border-b border-white/5 transition-colors">Beranda</a>
+          <a href="#galeri"     class="block py-2.5 text-sm text-white/70 hover:text-gold-400 border-b border-white/5 transition-colors">Galeri</a>
+          <a href="#aktivitas"  class="block py-2.5 text-sm text-white/70 hover:text-gold-400 border-b border-white/5 transition-colors">Aktivitas</a>
+          <a href="#lokasi"     class="block py-2.5 text-sm text-white/70 hover:text-gold-400 border-b border-white/5 transition-colors">Lokasi</a>
+          <a href="#informasi"  class="block py-2.5 text-sm text-white/70 hover:text-gold-400 border-b border-white/5 transition-colors">Tiket</a>
+          <a href="#formulir"   class="block py-2.5 text-sm text-white/70 hover:text-gold-400 border-b border-white/5 transition-colors">Reservasi</a>
+          <a href="#multimedia" class="block py-2.5 text-sm text-white/70 hover:text-gold-400 transition-colors">Video</a>
+          <a href="#formulir"
+             class="mt-3 block bg-gold-500 hover:bg-gold-400 text-ocean-950 font-semibold text-sm px-5 py-2.5 rounded-full text-center transition-colors">
+            Reservasi Sekarang
+          </a>
+        </div>
+      </details>
+    </div>
+
+  </nav>
+
+  <main>
+
+    <!-- ================================================
+         HEADER + HERO  (#beranda)
+         ================================================ -->
+    <section id="beranda"
+             class="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden pt-20 px-5">
+
+      <!-- Gradient background layers -->
+      <div class="absolute inset-0 bg-gradient-to-b from-ocean-950 via-ocean-900 to-ocean-800"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_95%,rgba(14,116,144,0.22),transparent)]"></div>
+      <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-teal-500/8 to-transparent"></div>
+      <!-- Horizon line -->
+      <div class="absolute bottom-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal-400/35 to-transparent"></div>
+
+      <!-- Header text -->
+      <div class="relative z-10 max-w-3xl w-full mx-auto">
+        <p class="text-teal-300 text-xs sm:text-sm font-medium tracking-widest mb-4">
+          Gunungkidul · Daerah Istimewa Yogyakarta
+        </p>
+
+        <!-- h1 = nama website (ketentuan tugas: header berisi nama utama) -->
+        <h1 class="font-display text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-3">
+          Obelix
+          <em class="not-italic text-gold-400"> Sea View</em>
+        </h1>
+
+        <!-- Tagline singkat -->
+        <p class="font-display text-lg sm:text-xl md:text-2xl italic text-white/55 mb-7">
+          The Twilight Paradise — Pesona Senja di Atas Tebing
+        </p>
+
+        <p class="text-white/65 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-10">
+          Saksikan keajaiban matahari terbenam dari tebing yang menghadap langsung ke
+          Samudra Hindia. Pengalaman senja paling dramatis di Yogyakarta.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="flex flex-col xs:flex-row gap-3 justify-center">
+          <a href="#formulir"
+             class="bg-gold-500 hover:bg-gold-400 text-ocean-950 font-semibold px-7 py-3 rounded-full transition-colors text-sm sm:text-base">
+            Reservasi Sekarang
+          </a>
+          <a href="#galeri"
+             class="border border-white/30 hover:border-white/60 text-white/75 hover:text-white px-7 py-3 rounded-full transition-colors text-sm sm:text-base">
+            Lihat Galeri
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/25">
+        <span class="text-xs tracking-widest">Gulir</span>
+        <div class="w-px h-8 bg-gradient-to-b from-white/25 to-transparent"></div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         GALERI  (#galeri)
+         ================================================ -->
+    <section id="galeri" class="py-20 sm:py-24 px-5 bg-ocean-900/40">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3">
+          Galeri Obelix Sea View
+        </h2>
+        <p class="text-white/45 text-center text-sm mb-12 max-w-sm mx-auto">
+          Sekilas panorama yang menanti Anda di atas tebing Gunungkidul
+        </p>
+
+        <!-- Grid galeri — 1 col → 3 col -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+
+          <figure class="group overflow-hidden rounded-2xl border border-white/10 hover:border-teal-400/40 transition-colors">
+            <div class="overflow-hidden">
+              <img src="https://rakyatempatlawang.bacakoran.co/upload/f469221b87704eab0c75f8c21454f808.jpg"
+                   alt="Pemandangan tebing menghadap laut di Obelix Sea View"
+                   class="w-full h-56 sm:h-52 md:h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <figcaption class="px-4 py-3 text-white/55 text-xs leading-relaxed">
+              Panorama tebing menghadap Samudra Hindia
+            </figcaption>
+          </figure>
+
+          <figure class="group overflow-hidden rounded-2xl border border-white/10 hover:border-teal-400/40 transition-colors">
+            <div class="overflow-hidden">
+              <img src="https://www.goersapp.com/blog/wp-content/uploads/2025/02/Fasilitas-dan-Wahana-di-Obelix-Sea-View.webp"
+                   alt="Spot foto instagramable di Obelix Sea View"
+                   class="w-full h-56 sm:h-52 md:h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <figcaption class="px-4 py-3 text-white/55 text-xs leading-relaxed">
+              Salah satu spot foto favorit pengunjung
+            </figcaption>
+          </figure>
+
+          <figure class="group overflow-hidden rounded-2xl border border-white/10 hover:border-teal-400/40 transition-colors sm:col-span-2 md:col-span-1">
+            <div class="overflow-hidden">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9ckbHwYJO2uDH7pAjvr1DqfR2sg66XKKKBFoGXHarUesCbYDWmVloLb4&s=10"
+                   alt="Suasana matahari terbenam dilihat dari Obelix Sea View"
+                   class="w-full h-56 sm:h-52 md:h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <figcaption class="px-4 py-3 text-white/55 text-xs leading-relaxed">
+              Momen matahari terbenam khas "The Twilight Paradise"
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         AKTIVITAS  (#aktivitas)
+         ================================================ -->
+    <section id="aktivitas" class="py-20 sm:py-24 px-5">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3">
+          Aktivitas yang Bisa Dilakukan
+        </h2>
+        <p class="text-white/45 text-center text-sm mb-12 max-w-sm mx-auto">
+          Beragam pengalaman menakjubkan tersedia untuk setiap pengunjung
+        </p>
+
+        <!-- Grid aktivitas 1 → 2 col -->
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <li class="flex items-start gap-4 bg-ocean-800/50 border border-white/10 rounded-2xl px-5 py-5 hover:border-teal-400/35 transition-colors">
+            <span class="text-2xl flex-shrink-0 mt-0.5">🌅</span>
+            <span class="text-white/70 text-sm leading-relaxed">Menikmati panorama matahari terbenam dari atas tebing</span>
+          </li>
+          <li class="flex items-start gap-4 bg-ocean-800/50 border border-white/10 rounded-2xl px-5 py-5 hover:border-teal-400/35 transition-colors">
+            <span class="text-2xl flex-shrink-0 mt-0.5">📸</span>
+            <span class="text-white/70 text-sm leading-relaxed">Berfoto di berbagai spot instagramable</span>
+          </li>
+          <li class="flex items-start gap-4 bg-ocean-800/50 border border-white/10 rounded-2xl px-5 py-5 hover:border-teal-400/35 transition-colors">
+            <span class="text-2xl flex-shrink-0 mt-0.5">🍽️</span>
+            <span class="text-white/70 text-sm leading-relaxed">Bersantai di resto dan kafe sambil menikmati pemandangan laut</span>
+          </li>
+          <li class="flex items-start gap-4 bg-ocean-800/50 border border-white/10 rounded-2xl px-5 py-5 hover:border-teal-400/35 transition-colors">
+            <span class="text-2xl flex-shrink-0 mt-0.5">🪜</span>
+            <span class="text-white/70 text-sm leading-relaxed">Menyusuri wahana "The Stairs" yang menghadap Samudra Hindia</span>
+          </li>
+          <li class="flex items-start gap-4 bg-ocean-800/50 border border-white/10 rounded-2xl px-5 py-5 hover:border-teal-400/35 transition-colors sm:col-span-2">
+            <span class="text-2xl flex-shrink-0 mt-0.5">🌿</span>
+            <span class="text-white/70 text-sm leading-relaxed">Menjelajahi kawasan perbukitan sekitar Pantai Parangtritis</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================================================
+         LOKASI  (#lokasi)
+         ================================================ -->
+    <section id="lokasi" class="py-20 sm:py-24 px-5 bg-ocean-900/40">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-5">
+          Lokasi dan Akses
+        </h2>
+        <p class="text-white/65 text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
+          Obelix Sea View berada di Kalurahan Giricahyo, Kapanewon Purwosari,
+          Kabupaten Gunungkidul, Daerah Istimewa Yogyakarta, sekitar 1–1,5 jam
+          perjalanan dari pusat Kota Yogyakarta. Akses jalan sudah beraspal dan
+          dapat dilalui kendaraan roda dua maupun roda empat, dengan papan penunjuk
+          arah yang jelas di sepanjang rute.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex flex-col xs:flex-row justify-center gap-6 mb-10">
+          <div class="bg-ocean-800/60 border border-white/10 rounded-2xl px-8 py-5">
+            <p class="font-display text-3xl font-bold text-gold-400">1–1,5<span class="text-base font-body text-white/45 ml-1">jam</span></p>
+            <p class="text-white/45 text-xs mt-1">dari pusat Yogyakarta</p>
+          </div>
+          <div class="bg-ocean-800/60 border border-white/10 rounded-2xl px-8 py-5">
+            <p class="font-display text-3xl font-bold text-gold-400">360°</p>
+            <p class="text-white/45 text-xs mt-1">panorama cakrawala</p>
+          </div>
+        </div>
+
+        <a href="https://www.google.com/maps/search/Obelix+Sea+View+Gunungkidul"
+           target="_blank"
+           class="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
+          📍 Lihat Lokasi di Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- ================================================
+         INFORMASI TIKET  (#informasi)
+         ================================================ -->
+    <section id="informasi" class="py-20 sm:py-24 px-5">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3">
+          Informasi Tiket & Jam Operasional
+        </h2>
+        <p class="text-white/45 text-center text-sm mb-12 max-w-sm mx-auto">
+          Pilih waktu dan paket yang paling sesuai untuk kunjungan Anda
+        </p>
+
+        <!-- ── MOBILE: card per baris (tampil di < md) ── -->
+        <div class="md:hidden flex flex-col gap-4">
+
+          <!-- Card 1 -->
+          <div class="bg-ocean-800/50 border border-white/10 rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-white font-semibold text-sm">Senin – Jumat</span>
+              <span class="text-teal-300 text-xs bg-teal-500/15 px-3 py-1 rounded-full">09.00 – 21.00 WIB</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-center">
+              <div class="bg-ocean-900/60 rounded-xl py-3 px-2">
+                <p class="text-white/40 text-xs mb-1">Reguler</p>
+                <p class="text-white text-sm font-semibold">Rp 30.000</p>
+              </div>
+              <div class="bg-gold-500/10 border border-gold-500/20 rounded-xl py-3 px-2">
+                <p class="text-white/40 text-xs mb-1">Sunset</p>
+                <p class="text-gold-400 text-sm font-bold">Rp 50.000</p>
+              </div>
+              <div class="bg-ocean-900/60 rounded-xl py-3 px-2">
+                <p class="text-white/40 text-xs mb-1">Rombongan</p>
+                <p class="text-white text-sm font-semibold">Rp 40.000</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-ocean-800/50 border border-white/10 rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-white font-semibold text-sm">Sabtu – Minggu</span>
+              <span class="text-teal-300 text-xs bg-teal-500/15 px-3 py-1 rounded-full">08.00 – 22.00 WIB</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-center">
+              <div class="bg-ocean-900/60 rounded-xl py-3 px-2">
+                <p class="text-white/40 text-xs mb-1">Reguler</p>
+                <p class="text-white text-sm font-semibold">Rp 40.000</p>
+              </div>
+              <div class="bg-gold-500/10 border border-gold-500/20 rounded-xl py-3 px-2">
+                <p class="text-white/40 text-xs mb-1">Sunset</p>
+                <p class="text-gold-400 text-sm font-bold">Rp 60.000</p>
+              </div>
+              <div class="bg-ocean-900/60 rounded-xl py-3 px-2">
+                <p class="text-white/40 text-xs mb-1">Rombongan</p>
+                <p class="text-white text-sm font-semibold">Rp 50.000</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-ocean-800/50 border border-white/10 rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-white font-semibold text-sm">Hari Libur Nasional</span>
+              <span class="text-teal-300 text-xs bg-teal-500/15 px-3 py-1 rounded-full">08.00 – 22.00 WIB</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-center">
+              <div class="bg-ocean-900/60 rounded-xl py-3 px-2">
+                <p class="text-white/40 text-xs mb-1">Reguler</p>
+                <p class="text-white text-sm font-semibold">Rp 40.000</p>
+              </div>
+              <div class="bg-gold-500/10 border border-gold-500/20 rounded-xl py-3 px-2">
+                <p class="text-white/40 text-xs mb-1">Sunset</p>
+                <p class="text-gold-400 text-sm font-bold">Rp 90.000</p>
+              </div>
+              <div class="bg-ocean-900/60 rounded-xl py-3 px-2">
+                <p class="text-white/40 text-xs mb-1">Rombongan</p>
+                <p class="text-white text-sm font-semibold">Rp 50.000</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-white/30 text-xs text-center italic px-2">
+            *Harga dan jam operasional dapat berubah sewaktu-waktu. Cek info terbaru sebelum berkunjung.
+          </p>
+        </div>
+
+        <!-- ── DESKTOP: tabel normal (tampil di ≥ md) ── -->
+        <div class="hidden md:block overflow-x-auto rounded-2xl border border-white/10">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-ocean-800/90 text-white/50 text-xs">
+                <th class="px-5 py-4 text-left font-medium">Hari</th>
+                <th class="px-5 py-4 text-left font-medium">Jam Operasional</th>
+                <th class="px-5 py-4 text-right font-medium">Reguler</th>
+                <th class="px-5 py-4 text-right font-medium">Sunset + Kafe</th>
+                <th class="px-5 py-4 text-right font-medium">Rombongan</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="bg-ocean-800/25 hover:bg-ocean-800/55 transition-colors">
+                <td class="px-5 py-4 text-white/80">Senin – Jumat</td>
+                <td class="px-5 py-4 text-white/55">09.00 – 21.00 WIB</td>
+                <td class="px-5 py-4 text-right text-white/75">Rp 30.000</td>
+                <td class="px-5 py-4 text-right text-gold-400 font-semibold">Rp 50.000</td>
+                <td class="px-5 py-4 text-right text-white/75">Rp 40.000</td>
+              </tr>
+              <tr class="bg-ocean-800/25 hover:bg-ocean-800/55 transition-colors">
+                <td class="px-5 py-4 text-white/80">Sabtu – Minggu</td>
+                <td class="px-5 py-4 text-white/55">08.00 – 22.00 WIB</td>
+                <td class="px-5 py-4 text-right text-white/75">Rp 40.000</td>
+                <td class="px-5 py-4 text-right text-gold-400 font-semibold">Rp 60.000</td>
+                <td class="px-5 py-4 text-right text-white/75">Rp 50.000</td>
+              </tr>
+              <tr class="bg-ocean-800/25 hover:bg-ocean-800/55 transition-colors">
+                <td class="px-5 py-4 text-white/80">Hari Libur Nasional</td>
+                <td class="px-5 py-4 text-white/55">08.00 – 22.00 WIB</td>
+                <td class="px-5 py-4 text-right text-white/75">Rp 40.000</td>
+                <td class="px-5 py-4 text-right text-gold-400 font-semibold">Rp 90.000</td>
+                <td class="px-5 py-4 text-right text-white/75">Rp 50.000</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5"
+                    class="px-5 py-3 text-white/30 text-xs text-center bg-ocean-900/60 italic">
+                  *Harga dan jam operasional dapat berubah sewaktu-waktu. Cek info terbaru sebelum berkunjung.
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         FORMULIR RESERVASI  (#formulir)
+         ================================================ -->
+    <section id="formulir" class="py-20 sm:py-24 px-5 bg-ocean-900/40">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3">
+          Formulir Reservasi Kunjungan
+        </h2>
+        <p class="text-white/45 text-center text-sm mb-12 max-w-sm mx-auto">
+          Isi formulir di bawah dan tim kami akan segera menghubungi Anda
+        </p>
+
+        <div class="[color-scheme:dark] bg-[#0f2340] border border-white/10 rounded-2xl p-6 sm:p-8 md:p-10">
+          <form method="POST" action="#">
+
+            <!-- Fieldset: Data Pengunjung -->
+            <fieldset class="mb-7">
+              <legend class="text-teal-300 text-xs font-semibold tracking-widest mb-5 pb-2 border-b border-white/10 w-full">
+                Data Pengunjung
+              </legend>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                <div>
+                  <label for="nama" class="block text-sm text-white/60 mb-2">Nama Lengkap</label>
+                  <input type="text" id="nama" name="nama" required
+                         placeholder="Nama lengkap Anda"
+                         class="bg-ocean-900 text-white w-full border border-white/15 rounded-xl px-4 py-3 text-sm placeholder-white/30 focus:outline-none focus:border-teal-400 transition-colors">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm text-white/60 mb-2">Email</label>
+                  <input type="email" id="email" name="email" required
+                         placeholder="email@contoh.com"
+                         class="bg-ocean-900 text-white w-full border border-white/15 rounded-xl px-4 py-3 text-sm placeholder-white/30 focus:outline-none focus:border-teal-400 transition-colors">
+                </div>
+              </div>
+
+              <div>
+                <label for="jumlah" class="block text-sm text-white/60 mb-2">Jumlah Pengunjung</label>
+                <input type="number" id="jumlah" name="jumlah" min="1" value="1"
+                       class="bg-ocean-900 text-white w-full sm:w-1/2 border border-white/15 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-teal-400 transition-colors">
+              </div>
+            </fieldset>
+
+            <!-- Fieldset: Detail Kunjungan -->
+            <fieldset class="mb-7">
+              <legend class="text-teal-300 text-xs font-semibold tracking-widest mb-5 pb-2 border-b border-white/10 w-full">
+                Detail Kunjungan
+              </legend>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                <div>
+                  <label for="tanggal" class="block text-sm text-white/60 mb-2">Tanggal Kunjungan</label>
+                  <input type="date" id="tanggal" name="tanggal"
+                         class="bg-ocean-900 text-white/75 w-full border border-white/15 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-teal-400 transition-colors">
+                </div>
+                <div>
+                  <label for="paket" class="block text-sm text-white/60 mb-2">Pilih Paket</label>
+                  <select id="paket" name="paket"
+                          class="bg-ocean-900 text-white/85 w-full border border-white/15 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-teal-400 transition-colors appearance-none">
+                    <option class="bg-ocean-900 text-white" value="reguler">Tiket Reguler</option>
+                    <option class="bg-ocean-900 text-white" value="sunset">Paket Sunset + Kafe</option>
+                    <option class="bg-ocean-900 text-white" value="rombongan">Paket Rombongan</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="catatan" class="block text-sm text-white/60 mb-2">Catatan Tambahan</label>
+                <textarea id="catatan" name="catatan" rows="4"
+                          placeholder="Contoh: butuh area parkir bus, alat bantu aksesibilitas, dsb."
+                          class="bg-ocean-900 text-white w-full border border-white/15 rounded-xl px-4 py-3 text-sm placeholder-white/30 focus:outline-none focus:border-teal-400 transition-colors resize-none"></textarea>
+              </div>
+            </fieldset>
+
+            <!-- Fieldset: Metode Kedatangan -->
+            <fieldset class="mb-7">
+              <legend class="text-teal-300 text-xs font-semibold tracking-widest mb-5 pb-2 border-b border-white/10 w-full">
+                Metode Kedatangan
+              </legend>
+              <div class="flex flex-col xs:flex-row gap-4">
+                <label class="flex items-center gap-3 cursor-pointer text-sm text-white/70">
+                  <input type="radio" name="kedatangan" value="pribadi" checked
+                         class="accent-teal-400 w-4 h-4">
+                  Kendaraan Pribadi
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer text-sm text-white/70">
+                  <input type="radio" name="kedatangan" value="sewa"
+                         class="accent-teal-400 w-4 h-4">
+                  Sewa Kendaraan / Tur
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Checkbox persetujuan -->
+            <label class="flex items-start gap-3 cursor-pointer mb-7">
+              <input type="checkbox" id="setuju" name="setuju" required
+                     class="accent-teal-400 w-4 h-4 mt-0.5 flex-shrink-0">
+              <span class="text-white/55 text-sm leading-relaxed">
+                Saya menyetujui syarat dan ketentuan kunjungan Obelix Sea View
+              </span>
+            </label>
+
+            <button type="submit"
+                    class="w-full bg-gold-500 hover:bg-gold-400 text-ocean-950 font-semibold py-3.5 rounded-xl transition-colors text-base">
+              Kirim Reservasi
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         VIDEO  (#multimedia)
+         ================================================ -->
+    <section id="multimedia" class="py-20 sm:py-24 px-5">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
+          Video Profil Obelix Sea View
+        </h2>
+        <p class="text-white/45 text-sm mb-10 max-w-sm mx-auto">
+          Rasakan suasana senja di atas tebing sebelum Anda hadir langsung
+        </p>
+
+        <!-- Responsive video wrapper -->
+        <div class="bg-ocean-800/50 border border-white/10 rounded-2xl overflow-hidden">
+          <video controls
+                 class="w-full max-h-[480px] object-contain">
+                 <!-- perbaiki video -->
+            <source src="vidobelix.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER  (#kontak)
+       ================================================ -->
+  <footer class="bg-ocean-900 border-t border-white/10 py-14 px-5">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Grid footer: 1 → 3 col -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-12">
+
+        <!-- Brand -->
+        <div>
+          <p class="font-display text-2xl font-bold text-gold-400 mb-3">Obelix Sea View</p>
+          <p class="text-white/40 text-sm leading-relaxed max-w-xs">
+            Destinasi wisata tebing dengan panorama Samudra Hindia terbaik di Yogyakarta.
+            Nikmati senja dari ketinggian yang tak terlupakan.
+          </p>
+        </div>
+
+        <!-- Lokasi -->
+        <div>
+          <p class="text-white/75 font-medium text-sm mb-4">Lokasi</p>
+          <p class="text-white/40 text-sm leading-relaxed mb-4">
+            Kalurahan Giricahyo, Kapanewon Purwosari,<br>
+            Kab. Gunungkidul,<br>
+            Daerah Istimewa Yogyakarta
+          </p>
+          <a href="https://www.google.com/maps/search/Obelix+Sea+View+Gunungkidul"
+             target="_blank"
+             class="text-teal-300 hover:text-teal-200 text-sm transition-colors">
+            📍 Lihat di Google Maps
+          </a>
+        </div>
+
+        <!-- Kontak & Sosial -->
+        <div>
+          <p class="text-white/75 font-medium text-sm mb-4">Hubungi Kami</p>
+          <div class="flex flex-col gap-3">
+            <a href="https://instagram.com/obelixseaview"
+               class="flex items-center gap-2 text-white/40 hover:text-white/75 text-sm transition-colors">
+              <span>📷</span> @obelixseaview
+            </a>
+            <a href="mailto:info@obelixseaview.com"
+               class="flex items-center gap-2 text-white/40 hover:text-white/75 text-sm transition-colors">
+              <span>✉️</span> info@obelixseaview.com
+            </a>
+            <a href="tel:+622741234567"
+               class="flex items-center gap-2 text-white/40 hover:text-white/75 text-sm transition-colors">
+              <span>📞</span> (0274) 123-4567
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white/10 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/25 text-xs">
+        <p>&copy; 2026 Obelix Sea View. Dibuat oleh Dylan Dwiputra Patarai.</p>
+        <p>H071251080 · Universitas Hasanuddin</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+</body>
+</html>
