@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy-950: #0d1530;
+  --color-navy-900: #111b3a;
+  --color-navy-800: #18244b;
+  --color-navy-700: #223160;
+  --color-blush: #f4a7c1;
+  --color-crimson: #b8264f;
+  --color-crimson-hover: #d02e5e;
+  --color-cream: #f6f0ea;
+  --color-mist: #b9c0d8;
+
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-dm-serif), Georgia, serif;
+}
