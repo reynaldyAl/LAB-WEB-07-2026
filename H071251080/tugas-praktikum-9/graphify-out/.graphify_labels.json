@@ -1,0 +1,17 @@
+{
+  "0": "Package Dependencies and Tooling",
+  "1": "Catalog Mutation Server Actions",
+  "2": "Global Layout and Shared Constants",
+  "3": "Home Page and Virtual Bookshelf",
+  "4": "Book Detail and Deletion Flow",
+  "5": "Interactive Catalog Search and Filter",
+  "6": "Database Driver and CLI Setup",
+  "7": "NPM Scripts and Development Commands",
+  "8": "Book Suggestion Submission",
+  "9": "JavaScript Path Aliases Configuration",
+  "10": "Next.js Framework Configuration",
+  "11": "Global Error Boundary",
+  "12": "Book Status Badge Component",
+  "13": "Agent Antislop Guidelines",
+  "14": "Server-side Input Validation"
+}

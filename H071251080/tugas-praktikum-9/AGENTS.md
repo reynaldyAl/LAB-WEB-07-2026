@@ -1,0 +1,1 @@
+Untuk tugas UI, layout, atau teks: selalu muat skill `antislop` dulu, lalu skill pendampingnya (`antislop-ui`, `antislop-layoutmobile`, `antislop-human`, `antislop-copywriting`).
