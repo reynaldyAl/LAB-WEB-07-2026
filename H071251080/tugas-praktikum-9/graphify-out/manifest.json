@@ -1,0 +1,218 @@
+{
+  "eslint.config.mjs": {
+    "mtime": 1793835733.0,
+    "seen": 1794463408.0918565,
+    "ast_hash": "bcb00e240634dd9448e57386fdff1902",
+    "semantic_hash": "bcb00e240634dd9448e57386fdff1902"
+  },
+  "jsconfig.json": {
+    "mtime": 1793835733.0,
+    "seen": 1794463408.0918612,
+    "ast_hash": "373b4d3b81ad935084b8292c8233423e",
+    "semantic_hash": "373b4d3b81ad935084b8292c8233423e"
+  },
+  "next.config.mjs": {
+    "mtime": 1793835990.0,
+    "seen": 1794463408.0918634,
+    "ast_hash": "1658d6d2187fffdd44c58cbc84ce4d17",
+    "semantic_hash": "1658d6d2187fffdd44c58cbc84ce4d17"
+  },
+  "package.json": {
+    "mtime": 1793854596.0,
+    "seen": 1794463408.0918643,
+    "ast_hash": "1a6c3938db9a82b453ded7493c7a3435",
+    "semantic_hash": "1a6c3938db9a82b453ded7493c7a3435"
+  },
+  "scripts/cek-koneksi.mjs": {
+    "mtime": 1793854516.0,
+    "seen": 1794463408.0918653,
+    "ast_hash": "ce81938788a4905e7932657555d12950",
+    "semantic_hash": "ce81938788a4905e7932657555d12950"
+  },
+  "scripts/setup-db.mjs": {
+    "mtime": 1793840555.0,
+    "seen": 1794463408.091866,
+    "ast_hash": "222f8379583b72084042754f1364205e",
+    "semantic_hash": "222f8379583b72084042754f1364205e"
+  },
+  "src/app/error.jsx": {
+    "mtime": 1793854651.0,
+    "seen": 1794463408.091867,
+    "ast_hash": "3d425e498398a6baced86d36931591df",
+    "semantic_hash": "3d425e498398a6baced86d36931591df"
+  },
+  "src/app/katalog/[id]/edit/page.jsx": {
+    "mtime": 1793854651.0,
+    "seen": 1794463408.091868,
+    "ast_hash": "c23ec74400582f9566302d7a87e345df",
+    "semantic_hash": "c23ec74400582f9566302d7a87e345df"
+  },
+  "src/app/katalog/[id]/page.jsx": {
+    "mtime": 1794413095.138522,
+    "seen": 1794463408.0918684,
+    "ast_hash": "9d0b6a8b8345062b4edb4baf53ed2e89",
+    "semantic_hash": "9d0b6a8b8345062b4edb4baf53ed2e89"
+  },
+  "src/app/katalog/actions.js": {
+    "mtime": 1794465550.5395916,
+    "seen": 1794465640.699163,
+    "ast_hash": "d89b5e681cacda072985dadfa0b60b62",
+    "semantic_hash": ""
+  },
+  "src/app/katalog/baru/page.jsx": {
+    "mtime": 1794385936.0,
+    "seen": 1794463408.09187,
+    "ast_hash": "f9f0ac6ad6c883d975e9e54de2a236bf",
+    "semantic_hash": "f9f0ac6ad6c883d975e9e54de2a236bf"
+  },
+  "src/app/katalog/page.jsx": {
+    "mtime": 1794413095.1563733,
+    "seen": 1794463408.091871,
+    "ast_hash": "4c679ddcd444bff2587c56cb436f27cb",
+    "semantic_hash": "4c679ddcd444bff2587c56cb436f27cb"
+  },
+  "src/app/layout.jsx": {
+    "mtime": 1794413095.182324,
+    "seen": 1794463408.0918715,
+    "ast_hash": "77d1ca64a2e0baa69526fe148eb22aa2",
+    "semantic_hash": "77d1ca64a2e0baa69526fe148eb22aa2"
+  },
+  "src/app/not-found.jsx": {
+    "mtime": 1794443125.0,
+    "seen": 1794463408.0918725,
+    "ast_hash": "ce1b4af08602c6da52c2912e98f95edf",
+    "semantic_hash": "ce1b4af08602c6da52c2912e98f95edf"
+  },
+  "src/app/page.jsx": {
+    "mtime": 1794413095.2256494,
+    "seen": 1794463408.0918732,
+    "ast_hash": "231134283851955130050f3516f2e033",
+    "semantic_hash": "231134283851955130050f3516f2e033"
+  },
+  "src/app/usulan/page.jsx": {
+    "mtime": 1794385424.0,
+    "seen": 1794463408.0918741,
+    "ast_hash": "72cb2e38fa6ecaef445203f41dfab290",
+    "semantic_hash": "72cb2e38fa6ecaef445203f41dfab290"
+  },
+  "src/components/BukuCard.jsx": {
+    "mtime": 1794413095.2730935,
+    "seen": 1794463408.0918748,
+    "ast_hash": "f04dd370008ade9792c3b2a61cf2e9e1",
+    "semantic_hash": "f04dd370008ade9792c3b2a61cf2e9e1"
+  },
+  "src/components/Footer.jsx": {
+    "mtime": 1794385520.0,
+    "seen": 1794463408.0918756,
+    "ast_hash": "b0ef3112ea9c5fb2758afeb0059e33dd",
+    "semantic_hash": "b0ef3112ea9c5fb2758afeb0059e33dd"
+  },
+  "src/components/FormBuku.jsx": {
+    "mtime": 1794465575.645624,
+    "seen": 1794465640.6991813,
+    "ast_hash": "f6947b79c9b8fc8c3f8847eb97722829",
+    "semantic_hash": ""
+  },
+  "src/components/FormUsulan.jsx": {
+    "mtime": 1794415571.865272,
+    "seen": 1794463408.0918772,
+    "ast_hash": "e2e2df5471599234e165302c55aa10ce",
+    "semantic_hash": "e2e2df5471599234e165302c55aa10ce"
+  },
+  "src/components/Hero.jsx": {
+    "mtime": 1794413095.2951033,
+    "seen": 1794463408.091878,
+    "ast_hash": "cc3f6bc6faf9564ed27ecaec551db711",
+    "semantic_hash": "cc3f6bc6faf9564ed27ecaec551db711"
+  },
+  "src/components/KatalogInteraktif.jsx": {
+    "mtime": 1794413095.3391242,
+    "seen": 1794463408.0918787,
+    "ast_hash": "539cd6ecd322483941d032d21e42d941",
+    "semantic_hash": "539cd6ecd322483941d032d21e42d941"
+  },
+  "src/components/Navbar.jsx": {
+    "mtime": 1794413095.379454,
+    "seen": 1794463408.0918794,
+    "ast_hash": "6060dd916f27bb45648103b925771dc9",
+    "semantic_hash": "6060dd916f27bb45648103b925771dc9"
+  },
+  "src/components/RakBukuVirtual.jsx": {
+    "mtime": 1794412059.9763706,
+    "seen": 1794463408.09188,
+    "ast_hash": "75676c8a7c2db3e727387932269e20dc",
+    "semantic_hash": "75676c8a7c2db3e727387932269e20dc"
+  },
+  "src/components/StatusBuku.jsx": {
+    "mtime": 1794443031.0,
+    "seen": 1794463408.091881,
+    "ast_hash": "b94b44f50d9cccb21ec73a8b253b381b",
+    "semantic_hash": "b94b44f50d9cccb21ec73a8b253b381b"
+  },
+  "src/components/TombolHapus.jsx": {
+    "mtime": 1794386440.0,
+    "seen": 1794463408.0918818,
+    "ast_hash": "6c37c2b3862182d4a2864382f6576514",
+    "semantic_hash": "6c37c2b3862182d4a2864382f6576514"
+  },
+  "src/lib/db.js": {
+    "mtime": 1794385678.0,
+    "seen": 1794463408.0918827,
+    "ast_hash": "e3d454fc99a3c56c1a92e1ed1dc11cfe",
+    "semantic_hash": "e3d454fc99a3c56c1a92e1ed1dc11cfe"
+  },
+  "src/lib/konstanta.js": {
+    "mtime": 1794412504.7944553,
+    "seen": 1794463408.0918834,
+    "ast_hash": "a98377a1c13693efd25a30aaa09c984e",
+    "semantic_hash": "a98377a1c13693efd25a30aaa09c984e"
+  },
+  "src/lib/queries.js": {
+    "mtime": 1793854771.0,
+    "seen": 1794463408.0918841,
+    "ast_hash": "343fb40333e34d817037884079f09e4e",
+    "semantic_hash": "343fb40333e34d817037884079f09e4e"
+  },
+  "src/lib/validasi.js": {
+    "mtime": 1794443008.0,
+    "seen": 1794463408.0918849,
+    "ast_hash": "e24e14d89a8bfaa8b5c48330e1c9fa7b",
+    "semantic_hash": "e24e14d89a8bfaa8b5c48330e1c9fa7b"
+  },
+  "AGENTS.md": {
+    "mtime": 1794410161.5826993,
+    "seen": 1794463408.0918856,
+    "ast_hash": "31aeca1da18c23c2bc1b16ade4baa9b2",
+    "semantic_hash": "31aeca1da18c23c2bc1b16ade4baa9b2"
+  },
+  "README.md": {
+    "mtime": 1793854994.0,
+    "seen": 1794463408.0918863,
+    "ast_hash": "8a4cfaea3540f6d63ad1d9d4ed6e720d",
+    "semantic_hash": "8a4cfaea3540f6d63ad1d9d4ed6e720d"
+  },
+  "public/favicon.svg": {
+    "mtime": 1793835990.0,
+    "seen": 1794463408.091887,
+    "ast_hash": "576d40b46424a1aca1634acaa1aab2ee",
+    "semantic_hash": "576d40b46424a1aca1634acaa1aab2ee"
+  },
+  ".agents/rules/ponytails.md": {
+    "mtime": 1794464367.3121092,
+    "seen": 1794465640.6992037,
+    "ast_hash": "b5355d93bcc7ef6ed29ae3a60cff85e0",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman/SKILLS.md": {
+    "mtime": 1794464859.02503,
+    "seen": 1794465640.6992059,
+    "ast_hash": "84377b6ebbcca103fd6a6765d90ee60c",
+    "semantic_hash": ""
+  },
+  "package-lock.json": {
+    "mtime": 1793856108.6667852,
+    "seen": 1794465640.6992137,
+    "ast_hash": "1fe68bfb4059acf7886f98dabc98d634",
+    "semantic_hash": ""
+  }
+}
